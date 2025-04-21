@@ -13,9 +13,6 @@ namespace RO.DevTest.WebApi.Controllers;
 [OpenApiTags("Auth")]
 public class AuthController(IMediator mediator) : Controller {
     private readonly IMediator _mediator = mediator;
-
-    ///[TODO] - CREATE LOGIN HANDLER HERE
-    ///
     [HttpPost]
     [ProducesResponseType(typeof(LoginResponse), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(LoginResponse), StatusCodes.Status400BadRequest)]
@@ -25,7 +22,7 @@ public class AuthController(IMediator mediator) : Controller {
         return Ok(response);
     }
 
-    [HttpPost("esqueceu-senha")]
+    [HttpPost("forgot-password")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public async Task<IActionResult> UpdatePassword(UpdatePasswordCommand request)
@@ -34,7 +31,7 @@ public class AuthController(IMediator mediator) : Controller {
         return Ok();
     }
 
-    [HttpPost("validar-recuperacao")]
+    [HttpPost("validation-reset")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public async Task<IActionResult> ValidateRecovery(ResetPasswordCommand resetRequest)
