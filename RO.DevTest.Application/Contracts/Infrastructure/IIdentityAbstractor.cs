@@ -103,6 +103,7 @@ public interface IIdentityAbstractor {
     Task<IList<string>> GetRolesAsync(User user);
     Task<IdentityResult> ResetPasswordAsync(User user, string token, string newPassword);
     Task<string> GeneratePasswordResetTokenAsync(User user);
+    Task<IdentityResult> UpdateUserAsync(User user);
 
 
 }

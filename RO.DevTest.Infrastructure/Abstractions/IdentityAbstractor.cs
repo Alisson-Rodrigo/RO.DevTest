@@ -11,7 +11,8 @@ namespace RO.DevTest.Infrastructure.Abstractions;
 /// This is a abstraction of the Identity library, creating methods that will interact with 
 /// it to create and update users
 /// </summary>
-public class IdentityAbstractor : IIdentityAbstractor {
+public class IdentityAbstractor : IIdentityAbstractor
+{
     private readonly UserManager<User> _userManager;
     private readonly SignInManager<User> _signInManager;
     private readonly RoleManager<IdentityRole> _roleManager;
@@ -20,7 +21,8 @@ public class IdentityAbstractor : IIdentityAbstractor {
         UserManager<User> userManager,
         SignInManager<User> signInManager,
         RoleManager<IdentityRole> roleManager
-    ) {
+    )
+    {
         _userManager = userManager;
         _signInManager = signInManager;
         _roleManager = roleManager;
@@ -32,12 +34,15 @@ public class IdentityAbstractor : IIdentityAbstractor {
 
     public async Task<IList<string>> GetUserRolesAsync(User user) => await _userManager.GetRolesAsync(user);
 
-    public async Task<IdentityResult> CreateUserAsync(User partnerUser, string password) {
-        if(string.IsNullOrEmpty(password)) {
+    public async Task<IdentityResult> CreateUserAsync(User partnerUser, string password)
+    {
+        if (string.IsNullOrEmpty(password))
+        {
             throw new ArgumentException($"{nameof(password)} cannot be null or empty", nameof(password));
         }
 
-        if(string.IsNullOrEmpty(partnerUser.Email)) {
+        if (string.IsNullOrEmpty(partnerUser.Email))
+        {
             throw new ArgumentException($"{nameof(User.Email)} cannot be null or empty", nameof(partnerUser));
         }
 
@@ -48,8 +53,10 @@ public class IdentityAbstractor : IIdentityAbstractor {
 
     public async Task<IdentityResult> DeleteUser(User user) => await _userManager.DeleteAsync(user);
 
-    public async Task<IdentityResult> AddToRoleAsync(User user, UserRoles role) {
-        if(await _roleManager.RoleExistsAsync(role.ToString()) is false) {
+    public async Task<IdentityResult> AddToRoleAsync(User user, UserRoles role)
+    {
+        if (await _roleManager.RoleExistsAsync(role.ToString()) is false)
+        {
             await _roleManager.CreateAsync(new IdentityRole { Name = role.ToString() });
         }
 
@@ -73,8 +80,14 @@ public class IdentityAbstractor : IIdentityAbstractor {
         return await _userManager.ResetPasswordAsync(user, decodedToken, newPassword);
     }
 
-    public async Task<string> GeneratePasswordResetTokenAsync (User user)
+    public async Task<string> GeneratePasswordResetTokenAsync(User user)
     {
         return await _userManager.GeneratePasswordResetTokenAsync(user);
     }
+    public async Task<IdentityResult> UpdateUserAsync(User user)
+    {
+        return await _userManager.UpdateAsync(user);
+    }
+
+
 }
