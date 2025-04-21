@@ -1,11 +1,9 @@
 ﻿using MediatR;
-using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.Mvc;
 using NSwag.Annotations;
 using RO.DevTest.Application.Features.Auth.Commands.LoginCommand;
 using RO.DevTest.Application.Features.Auth.Commands.ResetPassword;
 using RO.DevTest.Application.Features.Auth.Commands.UpdatePasswordCommand;
-using RO.DevTest.Application.Features.User.Commands.CreateUserCommand;
 
 namespace RO.DevTest.WebApi.Controllers;
 
@@ -23,7 +21,7 @@ public class AuthController(IMediator mediator) : Controller {
     }
 
     [HttpPost("forgot-password")]
-    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public async Task<IActionResult> UpdatePassword(UpdatePasswordCommand request)
     {
@@ -32,7 +30,7 @@ public class AuthController(IMediator mediator) : Controller {
     }
 
     [HttpPost("validation-reset")]
-    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public async Task<IActionResult> ValidateRecovery(ResetPasswordCommand resetRequest)
     {
