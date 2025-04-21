@@ -1,18 +1,19 @@
 ﻿using MediatR;
+using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Configuration;
-using Microsoft.IdentityModel.Tokens;
 using RO.DevTest.Application.Contracts.Infrastructure;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
+using RO.DevTest.Application.Services.TokenJwt;
+
 
 namespace RO.DevTest.Application.Features.Auth.Commands.LoginCommand;
 
 
-public class LoginCommandHandler(IIdentityAbstractor identityAbstractor, IConfiguration configuration) : IRequestHandler<LoginCommand, LoginResponse>
+public class LoginCommandHandler(IIdentityAbstractor identityAbstractor, IConfiguration configuration, IDistributedCache distributedCache) : IRequestHandler<LoginCommand, LoginResponse>
 {
     private readonly IIdentityAbstractor _identityAbstractor = identityAbstractor;
     private readonly IConfiguration _configuration = configuration;
+    private readonly IDistributedCache _cache = distributedCache; // Adicione cache distribuído
+
 
     public async Task<LoginResponse> Handle(LoginCommand request, CancellationToken cancellationToken)
     {
@@ -25,7 +26,8 @@ public class LoginCommandHandler(IIdentityAbstractor identityAbstractor, IConfig
             throw new UnauthorizedAccessException("Usuário ou senha inválidos");
 
         var roles = await _identityAbstractor.GetRolesAsync(user);
-        var token = GenerateJwtToken(user, roles);
+        var serviceToken = new TokenService(_configuration, _identityAbstractor, _cache);
+        var token = serviceToken.GenerateJwtToken(user, roles);
 
         return new LoginResponse
         {
@@ -36,38 +38,7 @@ public class LoginCommandHandler(IIdentityAbstractor identityAbstractor, IConfig
         };
     }
 
-    private string GenerateJwtToken(Domain.Entities.User user, IList<string> roles)
-    {
-        var jwtSettings = _configuration.GetSection("JwtSettings");
-        var key = Encoding.UTF8.GetBytes(jwtSettings["Key"]!);
-        var issuer = jwtSettings["Issuer"];
-        var audience = jwtSettings["Audience"];
-
-        var claims = new List<Claim>
-        {
-            new(ClaimTypes.NameIdentifier, user.Id),
-            new(ClaimTypes.Name, user.UserName!),
-            new(ClaimTypes.Email, user.Email!)
-        };
-
-        foreach (var role in roles)
-            claims.Add(new Claim(ClaimTypes.Role, role));
-
-        var tokenDescriptor = new SecurityTokenDescriptor
-        {
-            Subject = new ClaimsIdentity(claims),
-            Expires = DateTime.UtcNow.AddHours(2),
-            Issuer = issuer,
-            Audience = audience,
-            SigningCredentials = new SigningCredentials(
-                new SymmetricSecurityKey(key),
-                SecurityAlgorithms.HmacSha256Signature)
-        };
-
-        var tokenHandler = new JwtSecurityTokenHandler();
-        var token = tokenHandler.CreateToken(tokenDescriptor);
-        return tokenHandler.WriteToken(token);
-    }
+ 
 }
 
 

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using RO.DevTest.Application.Contracts.Infrastructure;
+using RO.DevTest.Application.Services.TokenJwt;
 using RO.DevTest.Domain.Entities;
 using RO.DevTest.Domain.Enums;
 
@@ -66,5 +67,14 @@ public class IdentityAbstractor : IIdentityAbstractor {
     public async Task<IList<string>> GetRolesAsync(User user)
     {
         return await _userManager.GetRolesAsync(user);
+    }
+    public async Task<IdentityResult> ResetPasswordAsync(User user, string decodedToken, string newPassword)
+    {
+        return await _userManager.ResetPasswordAsync(user, decodedToken, newPassword);
+    }
+
+    public async Task<string> GeneratePasswordResetTokenAsync (User user)
+    {
+        return await _userManager.GeneratePasswordResetTokenAsync(user);
     }
 }

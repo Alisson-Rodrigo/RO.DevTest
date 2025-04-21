@@ -101,4 +101,8 @@ public interface IIdentityAbstractor {
     Task<SignInResult> CheckPasswordSignInAsync(User user, string password);
     Task<User?> FindByNameAsync(string username);
     Task<IList<string>> GetRolesAsync(User user);
+    Task<IdentityResult> ResetPasswordAsync(User user, string token, string newPassword);
+    Task<string> GeneratePasswordResetTokenAsync(User user);
+
+
 }
