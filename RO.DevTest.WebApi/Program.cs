@@ -1,6 +1,11 @@
+using Microsoft.AspNetCore.Identity;
+using Microsoft.IdentityModel.Tokens;
 using RO.DevTest.Application;
+using RO.DevTest.Domain.Entities;
 using RO.DevTest.Infrastructure.IoC;
+using RO.DevTest.Persistence;
 using RO.DevTest.Persistence.IoC;
+using System.Text;
 
 namespace RO.DevTest.WebApi;
 
@@ -11,6 +16,25 @@ public class Program {
         builder.Services.AddControllers();
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
+
+        var jwtSettings = builder.Configuration.GetSection("JwtSettings");
+        var key = Encoding.ASCII.GetBytes(jwtSettings["Key"]!);
+
+        builder.Services.AddAuthentication("Bearer")
+            .AddJwtBearer("Bearer", options =>
+            {
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidIssuer = jwtSettings["Issuer"],
+                    ValidateAudience = true,
+                    ValidAudience = jwtSettings["Audience"],
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
+                    ValidateLifetime = true,
+                    ClockSkew = TimeSpan.Zero
+                };
+            });
 
         builder.Services.InjectPersistenceDependencies(builder.Configuration)
             .InjectInfrastructureDependencies();
@@ -33,6 +57,8 @@ public class Program {
         }
 
         app.UseHttpsRedirection();
+
+        app.UseAuthentication();
 
         app.UseAuthorization();
 

@@ -98,4 +98,7 @@ public interface IIdentityAbstractor {
     /// A <see cref="Task{IdentityResult}"/>
     /// </returns>
     Task<IdentityResult> DeleteUser(User user);
+    Task<SignInResult> CheckPasswordSignInAsync(User user, string password);
+    Task<User?> FindByNameAsync(string username);
+    Task<IList<string>> GetRolesAsync(User user);
 }
