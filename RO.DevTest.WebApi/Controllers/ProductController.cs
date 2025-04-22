@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NSwag.Annotations;
 using RO.DevTest.Application.Features.Product.Commands.CreatedProductCommand;
+using RO.DevTest.Application.Features.Product.Commands.DeleteProductCommand;
 using RO.DevTest.Application.Features.Product.Commands.GetAllProductCommand;
 using RO.DevTest.Application.Features.Product.Commands.GetProductIdCommand;
 using RO.DevTest.Application.Features.Product.Commands.UpdateProductCommand;
@@ -60,6 +61,16 @@ namespace RO.DevTest.WebApi.Controllers
 
         }
 
+        [HttpDelete("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> DeleteProduct([FromRoute] Guid id)
+        {
+            var request = new DeleteProductCommand { Id = id };
+            await _mediator.Send(request);
+            return NoContent();
+
+        }
 
     }
 }
