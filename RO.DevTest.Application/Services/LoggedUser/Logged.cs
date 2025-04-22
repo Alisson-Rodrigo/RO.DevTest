@@ -52,6 +52,15 @@ namespace RO.DevTest.Application.Services.LoggedUser
                 throw;
             }
         }
+
+        public async Task<bool> IsInRole(string role)
+        {
+            var user = await UserLogged();
+            var roles = await _identityAbstractor.GetRolesAsync(user);
+            Console.WriteLine(roles.FirstOrDefault()?.ToString());
+            return roles.Contains(role);
+        }
+
     }
 }
 

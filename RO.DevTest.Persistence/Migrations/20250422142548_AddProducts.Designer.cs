@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using RO.DevTest.Persistence;
@@ -11,9 +12,11 @@ using RO.DevTest.Persistence;
 namespace RO.DevTest.Persistence.Migrations
 {
     [DbContext(typeof(DefaultContext))]
-    partial class DefaultContextModelSnapshot : ModelSnapshot
+    [Migration("20250422142548_AddProducts")]
+    partial class AddProducts
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -177,9 +180,6 @@ namespace RO.DevTest.Persistence.Migrations
 
                     b.Property<string[]>("ImageUrl")
                         .HasColumnType("text[]");
-
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("boolean");
 
                     b.Property<DateTime>("ModifiedOn")
                         .HasColumnType("timestamp with time zone");

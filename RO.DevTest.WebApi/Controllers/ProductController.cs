@@ -1,7 +1,9 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NSwag.Annotations;
+using RO.DevTest.Application.Features.Product.Commands.CreatedProductCommand;
 
 namespace RO.DevTest.WebApi.Controllers
 {
@@ -12,11 +14,15 @@ namespace RO.DevTest.WebApi.Controllers
     {
         private readonly IMediator _mediator = mediator;
 
-        /*
+        [Authorize]
         [HttpPost]
-        [ProducesResponseType(typeof(CreateProductResult), StatusCodes.Status201Created)]
-        [ProducesResponseType(typeof(CreateProductResult), StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> CreatedProduct {  get; set; }
-        */
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> CreatedProduct([FromForm] CreatedProductCommand request)
+        {
+            await _mediator.Send(request);
+            return NoContent();
+        }
+        
     }
 }

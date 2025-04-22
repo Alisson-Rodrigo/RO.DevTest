@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using RO.DevTest.Application.Contracts.Persistance.Repositories;
+using RO.DevTest.Persistence.Repositories;
 
 namespace RO.DevTest.Persistence.IoC;
 
@@ -21,6 +23,8 @@ public static class PersistenceDependencyInjector {
     {
         services.AddDbContext<DefaultContext>(options =>
             options.UseNpgsql(configuration.GetConnectionString("PostgreSQL")));
+
+        services.AddScoped<IProductRepository, ProductRepository>();
 
         return services;
     }
