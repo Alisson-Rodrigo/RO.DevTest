@@ -23,7 +23,7 @@ namespace RO.DevTest.Application.Features.User.Commands.GetIdUserCommand
         {
             try
             {
-                var user = await _identityAbstractor.FindUserByIdAsync(command.Id);
+                var user = await _identityAbstractor.FindUserByIdAsync(command.Id.ToString());
                 if (user == null)
                 {
                     throw new Exception("Usuário não encontrado");

@@ -10,6 +10,6 @@ namespace RO.DevTest.Application.Features.User.Commands.GetIdUserCommand
 {
     public class GetUserIdCommand : IRequest<GetUserIdResult>
     {
-        public string Id { get; set; } = string.Empty;
+        public Guid Id { get; set; }
     }
 }
