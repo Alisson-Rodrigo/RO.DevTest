@@ -22,12 +22,12 @@ namespace RO.DevTest.Application.Features.Product.Commands.UpdateProductCommand
 
         public async Task<Unit> Handle(UpdateProductCommand command, CancellationToken cancellationToken)
         {
-            var produto = await ValidateUpdateProduct(command.Id, command, cancellationToken);
-
             if (!await _logged.IsInRole("Admin"))
             {
                 throw new ForbiddenException("Apenas administradores podem atualizar produtos.");
             }
+
+            var produto = await ValidateUpdateProduct(command.Id, command, cancellationToken);
 
             produto.Name = command.Name;
             produto.Description = command.Description;
