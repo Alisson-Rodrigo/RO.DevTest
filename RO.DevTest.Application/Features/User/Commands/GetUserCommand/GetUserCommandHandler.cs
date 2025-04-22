@@ -11,8 +11,7 @@ namespace RO.DevTest.Application.Features.User.Commands.GetUserCommand
     {
         private readonly ILogged _logged;
         public GetUserCommandHandler(
-            ILogged logged,
-            IIdentityAbstractor identityAbstractor)
+            ILogged logged)
         {
             _logged = logged;
         }
