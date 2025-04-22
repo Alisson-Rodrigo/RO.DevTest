@@ -25,6 +25,8 @@ public static class PersistenceDependencyInjector {
             options.UseNpgsql(configuration.GetConnectionString("PostgreSQL")));
 
         services.AddScoped<IProductRepository, ProductRepository>();
+        services.AddScoped<ICartRepository, CartRepository>();
+
 
         return services;
     }

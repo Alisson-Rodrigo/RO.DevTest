@@ -2,21 +2,45 @@
 using Microsoft.EntityFrameworkCore;
 using RO.DevTest.Domain.Entities;
 
-namespace RO.DevTest.Persistence
+public class DefaultContext : IdentityDbContext<User>
 {
-    public class DefaultContext : IdentityDbContext<User>
+    public DefaultContext() { }
+
+    public DefaultContext(DbContextOptions<DefaultContext> options) : base(options) { }
+    public DbSet<CartItem> CartItems { get; set; }
+    public DbSet<Product> Products { get; set; }
+    public DbSet<Sale> Sales { get; set; }
+    public DbSet<SaleItem> SaleItems { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder builder)
     {
-        public DefaultContext() { }
+        builder.HasPostgresExtension("uuid-ossp");
+        builder.ApplyConfigurationsFromAssembly(typeof(DefaultContext).Assembly);
 
-        public DefaultContext(DbContextOptions<DefaultContext> options) : base(options) { }
-        public DbSet<Product> Products { get; set; }
+        builder.Entity<CartItem>()
+            .HasOne(c => c.Product)
+            .WithMany()
+            .HasForeignKey(c => c.ProductId)
+            .OnDelete(DeleteBehavior.Restrict);
 
-        protected override void OnModelCreating(ModelBuilder builder)
-        {
-            builder.HasPostgresExtension("uuid-ossp");
-            builder.ApplyConfigurationsFromAssembly(typeof(DefaultContext).Assembly);
+        builder.Entity<Sale>()
+            .HasOne(s => s.User)
+            .WithMany()
+            .HasForeignKey(s => s.UserId)
+            .OnDelete(DeleteBehavior.Restrict);
 
-            base.OnModelCreating(builder);
-        }
+        builder.Entity<Sale>()
+            .HasMany(s => s.Itens)
+            .WithOne(i => i.Sale)
+            .HasForeignKey(i => i.SaleId)
+            .OnDelete(DeleteBehavior.Cascade);
+
+        builder.Entity<SaleItem>()
+            .HasOne(i => i.Product)
+            .WithMany()
+            .HasForeignKey(i => i.ProductId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        base.OnModelCreating(builder);
     }
 }
