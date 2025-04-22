@@ -14,6 +14,7 @@ namespace RO.DevTest.Application.Features.Product.Commands.CreatedProductCommand
         public string Name { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
         public float Price { get; set; }
+        public int Stock { get; set; }
         public List<IFormFile>? Imagens { get; set; }
         public CategoriesProduct Categories { get; set; }
 
@@ -24,6 +25,7 @@ namespace RO.DevTest.Application.Features.Product.Commands.CreatedProductCommand
                 Name = Name,
                 Description = Description,
                 Price = Price,
+                Stock = Stock,
                 Category = Categories
             };
         }
