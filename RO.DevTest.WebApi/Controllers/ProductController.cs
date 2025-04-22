@@ -12,7 +12,7 @@ using RO.DevTest.Application.Features.User.Commands.GetIdUserCommand;
 
 namespace RO.DevTest.WebApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/product")]
     [OpenApiTags("Products")]
     [ApiController]
     public class ProductController(IMediator mediator) : ControllerBase
