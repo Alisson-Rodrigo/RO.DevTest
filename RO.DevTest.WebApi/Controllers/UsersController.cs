@@ -58,12 +58,12 @@ public class UsersController(IMediator mediator) : Controller {
 
     [Authorize]
     [HttpDelete]
-    [ProducesResponseType(typeof(DeleteUserResult), StatusCodes.Status200OK)]
-    [ProducesResponseType(typeof(DeleteUserResult), StatusCodes.Status401Unauthorized)]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     public async Task<IActionResult> DeleteUser (DeleteUserCommand request)
     {
-        var response = await _mediator.Send(request);
-        return Ok(response);
+        await _mediator.Send(request);
+        return NoContent();
     }
 
 
