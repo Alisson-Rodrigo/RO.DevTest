@@ -3,7 +3,7 @@ using RO.DevTest.Application.Contracts.Infrastructure;
 using RO.DevTest.Application.Services.LoggedUser;
 using RO.DevTest.Domain.Exception;
 
-namespace RO.DevTest.Application.Features.User.Commands.GetUserCommand
+namespace RO.DevTest.Application.Features.User.Queries.GetUserCommand
 {
     public class GetUserCommand : IRequest<GetUserResult> { }
 

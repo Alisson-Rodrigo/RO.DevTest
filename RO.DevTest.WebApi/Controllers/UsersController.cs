@@ -5,9 +5,9 @@ using Microsoft.AspNetCore.Mvc;
 using NSwag.Annotations;
 using RO.DevTest.Application.Features.User.Commands.CreateUserCommand;
 using RO.DevTest.Application.Features.User.Commands.DeleteUserCommand;
-using RO.DevTest.Application.Features.User.Commands.GetIdUserCommand;
-using RO.DevTest.Application.Features.User.Commands.GetUserCommand;
 using RO.DevTest.Application.Features.User.Commands.UpdateUserCommand;
+using RO.DevTest.Application.Features.User.Queries.GetIdUserCommand;
+using RO.DevTest.Application.Features.User.Queries.GetUserCommand;
 
 namespace RO.DevTest.WebApi.Controllers;
 

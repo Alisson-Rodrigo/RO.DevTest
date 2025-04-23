@@ -5,9 +5,9 @@ using Microsoft.AspNetCore.Mvc;
 using NSwag.Annotations;
 using RO.DevTest.Application.Features.Product.Commands.CreatedProductCommand;
 using RO.DevTest.Application.Features.Product.Commands.DeleteProductCommand;
-using RO.DevTest.Application.Features.Product.Commands.GetAllProductCommand;
-using RO.DevTest.Application.Features.Product.Commands.GetProductIdCommand;
 using RO.DevTest.Application.Features.Product.Commands.UpdateProductCommand;
+using RO.DevTest.Application.Features.Product.Queries.GetAllProductCommand;
+using RO.DevTest.Application.Features.Product.Queries.GetProductIdCommand;
 using RO.DevTest.Application.Features.User.Commands.GetIdUserCommand;
 
 namespace RO.DevTest.WebApi.Controllers
@@ -55,7 +55,7 @@ namespace RO.DevTest.WebApi.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> GetProductId([FromRoute] Guid id)
         {
-            var request = new GetProductIdCommand{ Id = id };
+            var request = new GetProductIdQuery{ Id = id };
             var response = await _mediator.Send(request);
             return Ok(response);
 

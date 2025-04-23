@@ -7,17 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RO.DevTest.Application.Features.Product.Commands.GetProductIdCommand
+namespace RO.DevTest.Application.Features.Product.Queries.GetProductIdCommand
 {
-    public class GetProductIdCommandHandler : IRequestHandler<GetProductIdCommand, GetProductIdResult>
+    public class GetProductIdQueryHandler : IRequestHandler<GetProductIdQuery, GetProductIdResult>
     {
         private readonly IProductRepository _productRepository;
-        public GetProductIdCommandHandler(IProductRepository productRepository)
+        public GetProductIdQueryHandler(IProductRepository productRepository)
         {
             _productRepository = productRepository;
         }
-        
-        public async Task<GetProductIdResult> Handle (GetProductIdCommand command, CancellationToken cancellationToken)
+
+        public async Task<GetProductIdResult> Handle(GetProductIdQuery command, CancellationToken cancellationToken)
         {
             var product = _productRepository.Get(x => x.Id == command.Id);
 

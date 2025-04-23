@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RO.DevTest.Application.Features.Product.Commands.GetProductIdCommand
+namespace RO.DevTest.Application.Features.Product.Queries.GetProductIdCommand
 {
-    public class GetProductIdCommand : IRequest<GetProductIdResult>
+    public class GetProductIdQuery : IRequest<GetProductIdResult>
     {
         public Guid Id { get; set; }
     }

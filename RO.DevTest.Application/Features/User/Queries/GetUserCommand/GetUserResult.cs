@@ -1,6 +1,6 @@
 ﻿using RO.DevTest.Domain.Entities;
 
-namespace RO.DevTest.Application.Features.User.Commands.GetUserCommand
+namespace RO.DevTest.Application.Features.User.Queries.GetUserCommand
 {
     public class GetUserResult
     {

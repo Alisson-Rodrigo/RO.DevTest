@@ -2,15 +2,15 @@
 using Microsoft.AspNetCore.Http;
 using RO.DevTest.Application.Contracts.Persistance.Repositories;
 
-namespace RO.DevTest.Application.Features.Product.Commands.GetAllProductCommand
+namespace RO.DevTest.Application.Features.Product.Queries.GetAllProductCommand
 {
     public class GetAllProductCommand : IRequest<List<GetAllProductResult>> { } // Mudança no retorno
 
-    public class GetAllProductCommandHandler : IRequestHandler<GetAllProductCommand, List<GetAllProductResult>>
+    public class GetAllProductQueryHandler : IRequestHandler<GetAllProductCommand, List<GetAllProductResult>>
     {
         private readonly IProductRepository _productRepository;
 
-        public GetAllProductCommandHandler(IProductRepository productRepository)
+        public GetAllProductQueryHandler(IProductRepository productRepository)
         {
             _productRepository = productRepository;
         }

@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RO.DevTest.Application.Features.User.Commands.GetIdUserCommand
+namespace RO.DevTest.Application.Features.User.Queries.GetIdUserCommand
 {
     public class GetUserIdCommandHandler : IRequestHandler<GetUserIdCommand, GetUserIdResult>
     {

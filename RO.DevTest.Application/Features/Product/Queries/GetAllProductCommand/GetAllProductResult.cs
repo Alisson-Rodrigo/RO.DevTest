@@ -1,4 +1,4 @@
-﻿namespace RO.DevTest.Application.Features.Product.Commands.GetAllProductCommand
+﻿namespace RO.DevTest.Application.Features.Product.Queries.GetAllProductCommand
 {
     public class GetAllProductResult
     {

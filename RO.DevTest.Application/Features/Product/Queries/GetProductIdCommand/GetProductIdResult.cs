@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RO.DevTest.Application.Features.Product.Commands.GetProductIdCommand
+namespace RO.DevTest.Application.Features.Product.Queries.GetProductIdCommand
 {
     public class GetProductIdResult
     {
@@ -13,7 +13,7 @@ namespace RO.DevTest.Application.Features.Product.Commands.GetProductIdCommand
         public string Name { get; set; } = string.Empty;
         public float Price { get; set; }
         public string Description { get; set; }
-        public int Stock {get; set; }
+        public int Stock { get; set; }
         public CategoriesProduct CategoriesProduct { get; set; }
         public IList<string>? ImageUrl { get; set; } = new List<string>();
         public GetProductIdResult(Domain.Entities.Product product)
