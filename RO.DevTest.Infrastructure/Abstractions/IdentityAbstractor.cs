@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using RO.DevTest.Application.Contracts.Infrastructure;
-using RO.DevTest.Application.Services.TokenJwt;
 using RO.DevTest.Domain.Entities;
 using RO.DevTest.Domain.Enums;
 
