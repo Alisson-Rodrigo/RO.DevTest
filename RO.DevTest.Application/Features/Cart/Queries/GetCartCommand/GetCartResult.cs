@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RO.DevTest.Application.Features.Cart.Queries
+namespace RO.DevTest.Application.Features.Cart.Queries.GetCartCommand
 {
     public class CartItemResult
     {
