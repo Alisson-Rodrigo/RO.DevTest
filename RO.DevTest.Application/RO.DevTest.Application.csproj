@@ -28,9 +28,5 @@
     <ProjectReference Include="..\RO.DevTest.Domain\RO.DevTest.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Features\Cart\Commands\GetCartCommand\" />
-  </ItemGroup>
-
 
 </Project>

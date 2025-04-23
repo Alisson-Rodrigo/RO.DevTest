@@ -3,7 +3,7 @@ using RO.DevTest.Application.Contracts.Persistance.Repositories;
 using RO.DevTest.Application.Services.LoggedUser;
 using RO.DevTest.Domain.Exception;
 
-namespace RO.DevTest.Application.Features.Cart.Queries
+namespace RO.DevTest.Application.Features.Cart.Queries.GetCartCommand
 {
 
     public class GetCartQueryHandler : IRequestHandler<GetCartQuery, List<CartItemResult>>
