@@ -12,7 +12,7 @@ namespace RO.DevTest.Domain.Entities
         public string UserId { get; set; } = string.Empty;
         public User User { get; set; } = null!;
         public DateTime DataVenda { get; set; } = DateTime.UtcNow;
-        public decimal Total { get; set; }
+        public float Total { get; set; } 
         public ICollection<SaleItem> Itens { get; set; } = new List<SaleItem>();
     }
 

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using RO.DevTest.Domain.Entities;
+using System.Reflection.Emit;
 
 public class DefaultContext : IdentityDbContext<User>
 {
@@ -17,11 +18,14 @@ public class DefaultContext : IdentityDbContext<User>
         builder.HasPostgresExtension("uuid-ossp");
         builder.ApplyConfigurationsFromAssembly(typeof(DefaultContext).Assembly);
 
+
         builder.Entity<CartItem>()
             .HasOne(c => c.Product)
             .WithMany()
             .HasForeignKey(c => c.ProductId)
             .OnDelete(DeleteBehavior.Restrict);
+
+        builder.Entity<Sale>().Property(s => s.Total).HasColumnType("numeric");
 
         builder.Entity<Sale>()
             .HasOne(s => s.User)
