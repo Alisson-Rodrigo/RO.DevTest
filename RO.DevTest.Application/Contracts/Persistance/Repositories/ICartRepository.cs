@@ -7,6 +7,10 @@ namespace RO.DevTest.Application.Contracts.Persistance.Repositories
     {
         Task<IEnumerable<CartItem>> GetUserCartAsync(string userId);
         Task<CartItem?> GetItemAsync(string userId, Guid productId);
+        Task<List<CartItem>> GetListAsync(string userId);
+
+        Task DeleteAllAsync(string userId);
+
     }
 
 }

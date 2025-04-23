@@ -43,7 +43,8 @@ namespace RO.DevTest.Application.Features.Cart.Commands
                 {
                     UserId = user.Id,
                     ProductId = request.ProductId,
-                    Quantidade = request.Quantidade
+                    Quantidade = request.Quantidade,
+                    PrecoUnitario = product.Price
                 };
 
                 await _cartRepository.CreateAsync(novoItem, cancellationToken);

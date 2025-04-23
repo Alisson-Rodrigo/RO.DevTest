@@ -138,6 +138,7 @@ public class Program
         }
 
         app.UseHttpsRedirection();
+        app.UseMiddleware<CustomExceptionMiddleware>();
         app.UseRouting();
         app.UseStaticFiles();
         app.UseAuthentication();
