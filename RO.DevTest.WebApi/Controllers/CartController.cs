@@ -1,11 +1,9 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RO.DevTest.Application.Features.Cart.Commands;
 using RO.DevTest.Application.Features.Cart.Commands.DeleteCartCommand;
-using RO.DevTest.Application.Features.Cart.Queries;
-using RO.DevTest.Application.Features.Product.Commands.CreatedProductCommand;
+using RO.DevTest.Application.Features.Cart.Queries.GetCartCommand;
 
 namespace RO.DevTest.WebApi.Controllers
 {
