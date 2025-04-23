@@ -3,6 +3,7 @@ using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Configuration;
 using RO.DevTest.Application.Contracts.Infrastructure;
 using RO.DevTest.Application.Services.TokenJwt;
+using RO.DevTest.Domain.Exception;
 
 
 namespace RO.DevTest.Application.Features.Auth.Commands.LoginCommand;
@@ -19,11 +20,11 @@ public class LoginCommandHandler(IIdentityAbstractor identityAbstractor, IConfig
     {
         var user = await _identityAbstractor.FindByNameAsync(request.Username);
         if (user == null)
-            throw new UnauthorizedAccessException("Usuário ou senha inválidos");
+            throw new BadRequestException("Usuário ou senha inválidos");
 
         var result = await _identityAbstractor.CheckPasswordSignInAsync(user, request.Password);
         if (!result.Succeeded)
-            throw new UnauthorizedAccessException("Usuário ou senha inválidos");
+            throw new BadRequestException("Usuário ou senha inválidos");
 
         var roles = await _identityAbstractor.GetRolesAsync(user);
         var serviceToken = new TokenService(_configuration, _identityAbstractor, _cache);

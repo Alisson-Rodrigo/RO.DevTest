@@ -1,6 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using MediatR;
+using Microsoft.EntityFrameworkCore;
 using RO.DevTest.Application.Contracts.Persistance.Repositories;
 using RO.DevTest.Domain.Entities;
+using RO.DevTest.Domain.Enums;
 using System.Linq.Expressions;
 
 namespace RO.DevTest.Persistence.Repositories
@@ -29,6 +31,37 @@ namespace RO.DevTest.Persistence.Repositories
         {
             return await Context.Products.FirstOrDefaultAsync(p => p.Id == id);
         }
+
+        public async Task<List<Product>> GetPagedAsync(int page, int pageSize, string? orderBy, bool ascending, string? search)
+        {
+            var query = Context.Products.AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(search))
+                query = query.Where(p => p.Name.Contains(search));
+
+            query = orderBy?.ToLower() switch
+            {
+                "name" => ascending ? query.OrderBy(p => p.Name) : query.OrderByDescending(p => p.Name),
+                "price" => ascending ? query.OrderBy(p => p.Price) : query.OrderByDescending(p => p.Price),
+                _ => query.OrderBy(p => p.Name)
+            };
+
+            return await query
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+        } 
+
+        public async Task<int> GetTotalCountAsync(string? search)
+        {
+            var query = Context.Products.AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(search))
+                query = query.Where(p => p.Name.Contains(search));
+
+            return await query.CountAsync();
+        }
+
 
     }
 }

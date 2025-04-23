@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NSwag.Annotations;
+using RO.DevTest.Application.Features.Pages;
 using RO.DevTest.Application.Features.Product.Commands.CreatedProductCommand;
 using RO.DevTest.Application.Features.Product.Commands.DeleteProductCommand;
 using RO.DevTest.Application.Features.Product.Commands.UpdateProductCommand;
@@ -69,6 +70,15 @@ namespace RO.DevTest.WebApi.Controllers
             await _mediator.Send(request);
             return NoContent();
 
+        }
+
+        [HttpGet("paged")]
+        [ProducesResponseType(typeof(PagedResult), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(PagedResult), StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> GetPagedProducts([FromQuery] PagedRequest request)
+        {
+            var result = await _mediator.Send(request);
+            return Ok(result);
         }
 
     }
