@@ -1,6 +1,5 @@
 ﻿using MediatR;
 using RO.DevTest.Application.Contracts.Persistance.Repositories;
-using RO.DevTest.Application.Features.Product.Commands.GetAllProductCommand;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -8,7 +8,6 @@ using RO.DevTest.Application.Features.Product.Commands.DeleteProductCommand;
 using RO.DevTest.Application.Features.Product.Commands.UpdateProductCommand;
 using RO.DevTest.Application.Features.Product.Queries.GetAllProductCommand;
 using RO.DevTest.Application.Features.Product.Queries.GetProductIdCommand;
-using RO.DevTest.Application.Features.User.Commands.GetIdUserCommand;
 
 namespace RO.DevTest.WebApi.Controllers
 {

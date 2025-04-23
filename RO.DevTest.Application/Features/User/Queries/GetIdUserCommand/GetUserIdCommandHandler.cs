@@ -1,12 +1,6 @@
 ﻿using MediatR;
 using RO.DevTest.Application.Contracts.Infrastructure;
-using RO.DevTest.Application.Features.User.Commands.GetUserCommand;
-using RO.DevTest.Application.Services.LoggedUser;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace RO.DevTest.Application.Features.User.Queries.GetIdUserCommand
 {
