@@ -19,6 +19,18 @@ namespace RO.DevTest.Persistence.Repositories
             return await Context.CartItems
                 .FirstOrDefaultAsync(ci => ci.UserId == userId && ci.ProductId == productId);
         }
+        public async Task<List<CartItem>> GetListAsync(string userId)
+        {
+            return await Context.CartItems.Where(x => x.UserId == userId).ToListAsync();
+        }
+
+        public async Task DeleteAllAsync(string userId)
+        {
+            await Context.CartItems
+                .Where(x => x.UserId == userId)
+                .ExecuteDeleteAsync();
+        }
+
     }
 
 }

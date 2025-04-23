@@ -25,5 +25,10 @@ namespace RO.DevTest.Persistence.Repositories
             return await query.ToListAsync();
         }
 
+        public async Task<Product?> GetByIdAsync(Guid id)
+        {
+            return await Context.Products.FirstOrDefaultAsync(p => p.Id == id);
+        }
+
     }
 }
