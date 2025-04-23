@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RO.DevTest.Application.Features.Cart.Commands;
 using RO.DevTest.Application.Features.Cart.Commands.DeleteCartCommand;
+using RO.DevTest.Application.Features.Cart.Queries;
 using RO.DevTest.Application.Features.Product.Commands.CreatedProductCommand;
 
 namespace RO.DevTest.WebApi.Controllers
@@ -33,6 +34,17 @@ namespace RO.DevTest.WebApi.Controllers
             var command = new DeleteCartCommand{ Id = id};
             await _mediator.Send(command);
             return NoContent();
+        }
+
+        [Authorize]
+        [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> GetCart()
+        {
+            var request = new GetCartQuery();
+            var response = await _mediator.Send(request);
+            return Ok(response);
         }
     }
 }
