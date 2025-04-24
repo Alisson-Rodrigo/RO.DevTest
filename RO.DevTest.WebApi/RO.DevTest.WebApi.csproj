@@ -4,6 +4,8 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>f41504a1-21d8-4dfe-9642-5af2d2322495</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 
   <ItemGroup>
@@ -18,6 +20,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.8" />
     <PackageReference Include="NSwag.AspNetCore" Version="14.3.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
@@ -27,6 +30,14 @@
     <ProjectReference Include="..\RO.DevTest.Application\RO.DevTest.Application.csproj" />
     <ProjectReference Include="..\RO.DevTest.Infrastructure\RO.DevTest.Infrastructure.csproj" />
     <ProjectReference Include="..\RO.DevTest.Persistence\RO.DevTest.Persistence.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EditorConfigFiles Remove="C:\Users\PurooLight\source\repos\Alisson-Rodrigo\RO.DevTest\RO.DevTest.WebApi\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="C:\Users\PurooLight\source\repos\Alisson-Rodrigo\RO.DevTest\RO.DevTest.WebApi\.editorconfig" />
   </ItemGroup>
 
 </Project>
