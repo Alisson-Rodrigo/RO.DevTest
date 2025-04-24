@@ -63,7 +63,7 @@ namespace RO.DevTest.Application.Services.SMTPEmail
 
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 // Log detalhado para debug (em produção, opte por log sem detalhes sensíveis)
                 return false;

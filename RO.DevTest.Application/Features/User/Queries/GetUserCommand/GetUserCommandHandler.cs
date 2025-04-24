@@ -22,7 +22,7 @@ namespace RO.DevTest.Application.Features.User.Queries.GetUserCommand
                 var currentUser = await _logged.UserLogged();
                 return new GetUserResult(currentUser);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 throw new BadRequestException("Falha ao obter dados do usuário");
             }
