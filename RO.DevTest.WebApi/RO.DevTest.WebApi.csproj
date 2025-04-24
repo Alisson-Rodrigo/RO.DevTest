@@ -36,8 +36,4 @@
     <EditorConfigFiles Remove="C:\Users\PurooLight\source\repos\Alisson-Rodrigo\RO.DevTest\RO.DevTest.WebApi\.editorconfig" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Include="C:\Users\PurooLight\source\repos\Alisson-Rodrigo\RO.DevTest\RO.DevTest.WebApi\.editorconfig" />
-  </ItemGroup>
-
 </Project>
