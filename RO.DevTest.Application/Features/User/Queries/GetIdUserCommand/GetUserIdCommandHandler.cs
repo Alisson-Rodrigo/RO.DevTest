@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using RO.DevTest.Application.Contracts.Infrastructure;
+using RO.DevTest.Domain.Exception;
 
 
 namespace RO.DevTest.Application.Features.User.Queries.GetIdUserCommand
@@ -18,17 +19,26 @@ namespace RO.DevTest.Application.Features.User.Queries.GetIdUserCommand
             try
             {
                 var user = await _identityAbstractor.FindUserByIdAsync(command.Id.ToString());
+
                 if (user == null)
                 {
-                    throw new Exception("Usuário não encontrado");
+                    // Aqui você lança a BadRequestException com a mensagem exata que o teste espera
+                    throw new BadRequestException("Usuário não encontrado");
                 }
 
                 return new GetUserIdResult(user);
             }
-            catch (Exception ex)
+            catch (BadRequestException)
             {
-                throw new Exception("Erro ao buscar usuário");
+                // Se a exceção já for BadRequestException, apenas repassa
+                throw;
+            }
+            catch (Exception)
+            {
+                // Qualquer outro erro entra aqui com a mensagem genérica
+                throw new BadRequestException("Erro ao buscar usuário");
             }
         }
+
     }
 }

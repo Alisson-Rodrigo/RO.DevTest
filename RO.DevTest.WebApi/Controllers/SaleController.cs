@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RO.DevTest.Application.Features.Cart.Commands;
 using RO.DevTest.Application.Features.Sale.Commands.CreatedSaleCommand;
-using RO.DevTest.Application.Features.Sale.Queries;
+using RO.DevTest.Application.Features.Sale.Queries.SalesAnalysisQueries;
 
 namespace RO.DevTest.WebApi.Controllers
 {

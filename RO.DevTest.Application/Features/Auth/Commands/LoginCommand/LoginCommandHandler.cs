@@ -1,19 +1,18 @@
 ﻿using MediatR;
 using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Configuration;
+using RO.DevTest.Application.Contracts.Application.Service;
 using RO.DevTest.Application.Contracts.Infrastructure;
-using RO.DevTest.Application.Services.TokenJwt;
 using RO.DevTest.Domain.Exception;
 
 
 namespace RO.DevTest.Application.Features.Auth.Commands.LoginCommand;
 
 
-public class LoginCommandHandler(IIdentityAbstractor identityAbstractor, IConfiguration configuration, IDistributedCache distributedCache) : IRequestHandler<LoginCommand, LoginResponse>
+public class LoginCommandHandler(IIdentityAbstractor identityAbstractor, ITokenService tokenService) : IRequestHandler<LoginCommand, LoginResponse>
 {
     private readonly IIdentityAbstractor _identityAbstractor = identityAbstractor;
-    private readonly IConfiguration _configuration = configuration;
-    private readonly IDistributedCache _cache = distributedCache; // Adicione cache distribuído
+    private readonly ITokenService _tokenService = tokenService;
 
 
     public async Task<LoginResponse> Handle(LoginCommand request, CancellationToken cancellationToken)
@@ -27,8 +26,7 @@ public class LoginCommandHandler(IIdentityAbstractor identityAbstractor, IConfig
             throw new BadRequestException("Usuário ou senha inválidos");
 
         var roles = await _identityAbstractor.GetRolesAsync(user);
-        var serviceToken = new TokenService(_configuration, _identityAbstractor, _cache);
-        var token = serviceToken.GenerateJwtToken(user, roles);
+        var token = _tokenService.GenerateJwtToken(user, roles);
 
         return new LoginResponse
         {

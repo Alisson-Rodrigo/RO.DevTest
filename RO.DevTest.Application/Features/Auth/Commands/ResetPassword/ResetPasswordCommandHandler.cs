@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Configuration;
+using RO.DevTest.Application.Contracts.Application.Service;
 using RO.DevTest.Application.Contracts.Infrastructure;
 using RO.DevTest.Application.Services.TokenJwt;
 using RO.DevTest.Domain.Exception;
@@ -15,23 +16,22 @@ namespace RO.DevTest.Application.Features.Auth.Commands.ResetPassword
     public class ResetPasswordCommandHandler : IRequestHandler<ResetPasswordCommand, Unit>
     {
         private readonly IIdentityAbstractor _identityAbstractor;
-        private readonly IConfiguration _configuration;
-        private readonly IDistributedCache _cache; 
+
+        private readonly ITokenService _tokenService;
 
 
         public ResetPasswordCommandHandler(
-            IIdentityAbstractor identityAbstractor, IConfiguration configuration, IDistributedCache distributedCache)
+            IIdentityAbstractor identityAbstractor, ITokenService tokenService)
         {
             _identityAbstractor = identityAbstractor;
-            _configuration = configuration;
-            _cache = distributedCache;
+
+            _tokenService = tokenService;
         }
 
         public async Task<Unit> Handle(ResetPasswordCommand command, CancellationToken cancellationToken)
         {
             // Validação dos dados de entrada
             var validator = new ResetPasswordCommandValidator();
-            var serviceToken = new TokenService(_configuration, _identityAbstractor, _cache);
 
             var validationResult = await validator.ValidateAsync(command, cancellationToken);
 
@@ -41,7 +41,7 @@ namespace RO.DevTest.Application.Features.Auth.Commands.ResetPassword
             }
 
             // Valida o token de recuperação
-            if (!serviceToken.ValidatePasswordResetToken(command.Token, out ClaimsPrincipal principal))
+            if (!_tokenService.ValidatePasswordResetToken(command.Token, out ClaimsPrincipal principal))
             {
                 throw new BadRequestException("Token inválido ou expirado");
             }
@@ -60,7 +60,7 @@ namespace RO.DevTest.Application.Features.Auth.Commands.ResetPassword
                 throw new BadRequestException("Usuário não encontrado");
             }
 
-            var identityToken = await serviceToken.GetIdentityResetToken(userEmail);
+            var identityToken = await _tokenService.GetIdentityResetToken(userEmail);
             if (string.IsNullOrEmpty(identityToken))
             {
                 throw new BadRequestException("Token inválido ou já utilizado.");

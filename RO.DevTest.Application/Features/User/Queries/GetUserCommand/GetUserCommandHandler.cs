@@ -1,6 +1,6 @@
 ﻿using MediatR;
+using RO.DevTest.Application.Contracts.Application.Service;
 using RO.DevTest.Application.Contracts.Infrastructure;
-using RO.DevTest.Application.Services.LoggedUser;
 using RO.DevTest.Domain.Exception;
 
 namespace RO.DevTest.Application.Features.User.Queries.GetUserCommand

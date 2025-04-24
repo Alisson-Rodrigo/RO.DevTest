@@ -2,7 +2,7 @@
 using RO.DevTest.Application.Contracts.Persistance.Repositories;
 
 
-namespace RO.DevTest.Application.Features.Sale.Queries
+namespace RO.DevTest.Application.Features.Sale.Queries.SalesAnalysisQueries
 {
     public class SalesAnalysisHandler : IRequestHandler<SalesAnalysisRequest, SalesAnalysisResult>
     {

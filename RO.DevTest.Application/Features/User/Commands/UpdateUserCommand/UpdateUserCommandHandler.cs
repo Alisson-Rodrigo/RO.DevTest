@@ -1,8 +1,8 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Identity;
+using RO.DevTest.Application.Contracts.Application.Service;
 using RO.DevTest.Application.Contracts.Infrastructure;
 using RO.DevTest.Application.Features.User.Commands.CreateUserCommand;
-using RO.DevTest.Application.Services.LoggedUser;
 using RO.DevTest.Domain.Entities;
 using RO.DevTest.Domain.Exception;
 using System;

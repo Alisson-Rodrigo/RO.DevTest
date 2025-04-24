@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using RO.DevTest.Application.Contracts.Application.Service;
 using RO.DevTest.Application.Contracts.Infrastructure;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -9,12 +10,11 @@ using System.Text;
 
 namespace RO.DevTest.Application.Services.TokenJwt
 {
-    public class TokenService
+    public class TokenService : ITokenService
     {
         private readonly IConfiguration _configuration;
         private readonly IIdentityAbstractor _identityAbstractor;
         private readonly IDistributedCache _cache;
-
 
         public TokenService(IConfiguration configuration, IIdentityAbstractor identityAbstractor, IDistributedCache cache)
         {

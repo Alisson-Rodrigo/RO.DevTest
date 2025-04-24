@@ -1,14 +1,9 @@
 ﻿using MediatR;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using RO.DevTest.Application.Contracts.Infrastructure;
-using FluentValidation;
 using RO.DevTest.Domain.Exception;
-using System.Threading;
-using System.Threading.Tasks;
-using RO.DevTest.Application.Services.SMTPEmail;
-using RO.DevTest.Application.Services.TokenJwt;
-using Microsoft.Extensions.Caching.Distributed;
+
+using RO.DevTest.Application.Contracts.Application.Service;
 
 namespace RO.DevTest.Application.Features.Auth.Commands.UpdatePasswordCommand
 {
@@ -16,14 +11,16 @@ namespace RO.DevTest.Application.Features.Auth.Commands.UpdatePasswordCommand
     {
         private readonly IIdentityAbstractor _identityAbstractor;
         private readonly IConfiguration _configuration;
-        private readonly IDistributedCache _cache; // Adicione cache distribuído
+        private readonly ITokenService _tokenService;
+        private readonly ISend _send;
 
 
-        public UpdatePasswordHandler(IIdentityAbstractor identityAbstractor, IConfiguration configuration, IDistributedCache distributedCache)
+        public UpdatePasswordHandler(IIdentityAbstractor identityAbstractor, IConfiguration configuration, ITokenService tokenService, ISend send)
         {
             _identityAbstractor = identityAbstractor;
             _configuration = configuration;
-            _cache = distributedCache;
+            _tokenService = tokenService;
+            _send = send;
         }
 
         public async Task<Unit> Handle(UpdatePasswordCommand command, CancellationToken cancellationToken)
@@ -61,17 +58,15 @@ namespace RO.DevTest.Application.Features.Auth.Commands.UpdatePasswordCommand
 
         private async Task<bool> SendLinkEmail(UpdatePasswordCommand command, Domain.Entities.User user)
         {
-            var serviceToken = new TokenService(_configuration, _identityAbstractor, _cache);
-            var serviceEmail = new Send(_configuration);
 
             var roles = await _identityAbstractor.GetRolesAsync(user);
 
-            var token = await serviceToken.GeneratePasswordResetToken(user);
+            var token = await _tokenService.GeneratePasswordResetToken(user);
 
             var baseUrl = _configuration.GetValue<string>("AppSettings:PasswordResetUrl");
             var recoveryLink = $"{baseUrl}?token={token}";
 
-            bool responseEmail = serviceEmail.SendRecoveryEmail(command.Email.Trim(), recoveryLink);
+            bool responseEmail = _send.SendRecoveryEmail(command.Email.Trim(), recoveryLink);
 
             return responseEmail;
         }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RO.DevTest.Application.Services.LoggedUser
+namespace RO.DevTest.Application.Contracts.Application.Service
 {
     public interface ILogged
     {

@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace RO.DevTest.Application.Features.Sale.Queries
+namespace RO.DevTest.Application.Features.Sale.Queries.SalesAnalysisQueries
 {
     public class SalesAnalysisRequest : IRequest<SalesAnalysisResult>
     {

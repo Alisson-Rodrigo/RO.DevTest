@@ -6,10 +6,11 @@ using System.Net.Mail;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using RO.DevTest.Application.Contracts.Application.Service;
 
 namespace RO.DevTest.Application.Services.SMTPEmail
 {
-    public class Send
+    public class Send : ISend
     {
         private readonly IConfiguration _configuration;
 
