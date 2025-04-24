@@ -96,8 +96,8 @@ namespace RO.DevTest.Tests.Unit.Application.Features.Cart.Commands
             {
                 UserId = user.Id,
                 ProductId = product.Id,
-                Quantidade = 1,
-                PrecoUnitario = product.Price
+                Amount = 1,
+                UnitPrice = product.Price
             };
 
             _mockCartRepository.Setup(c => c.GetItemAsync(user.Id, product.Id)).ReturnsAsync(cartItem); // Produto já existe no carrinho
@@ -113,7 +113,7 @@ namespace RO.DevTest.Tests.Unit.Application.Features.Cart.Commands
 
             // Assert
             _mockCartRepository.Verify(c => c.Update(It.IsAny<CartItem>()), Times.Once);
-            Assert.Equal(3, cartItem.Quantidade); 
+            Assert.Equal(3, cartItem.Amount); 
         }
 
         [Fact]

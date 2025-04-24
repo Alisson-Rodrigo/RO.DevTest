@@ -36,14 +36,14 @@ public class SalesAnalysisHandlerTests
         {
             new()
             {
-                DataVenda = DateTime.UtcNow.AddDays(-1),
+                DateSale = DateTime.UtcNow.AddDays(-1),
                 Itens = new List<SaleItem>
                 {
                     new()
                     {
                         ProductId = productId,
-                        Quantidade = quantidade1,
-                        PrecoUnitario = precoUnitario,
+                        Amount = quantidade1,
+                        UnitPrice = precoUnitario,
                         Product = new Product
                         {
                             Id = productId,
@@ -53,8 +53,8 @@ public class SalesAnalysisHandlerTests
                     new()
                     {
                         ProductId = productId,
-                        Quantidade = quantidade2,
-                        PrecoUnitario = precoUnitario,
+                        Amount = quantidade2,
+                        UnitPrice = precoUnitario,
                         Product = new Product
                         {
                             Id = productId,

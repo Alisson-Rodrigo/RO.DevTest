@@ -40,23 +40,23 @@ namespace RO.DevTest.Application.Features.Sale.Commands.CreatedSaleCommand
                 if (product.Stock <= 0)
                     throw new BadRequestException($"Produto '{product.Name}' está fora de estoque");
 
-                if (item.Quantidade > product.Stock)
-                    throw new BadRequestException($"Estoque insuficiente para o produto '{product.Name}'. Quantidade disponível: {product.Stock}, solicitada: {item.Quantidade}");
+                if (item.Amount > product.Stock)
+                    throw new BadRequestException($"Estoque insuficiente para o produto '{product.Name}'. Quantidade disponível: {product.Stock}, solicitada: {item.Amount}");
             }
 
             var sale = new Domain.Entities.Sale
             {
                 UserId = user.Id,
-                DataVenda = DateTime.UtcNow,
+                DateSale = DateTime.UtcNow,
                 Itens = cartItems.Select(item => new SaleItem
                 {
                     ProductId = item.ProductId,
-                    Quantidade = item.Quantidade,
-                    PrecoUnitario = item.PrecoUnitario
+                    Amount = item.Amount,
+                    UnitPrice = item.UnitPrice
                 }).ToList()
             };
 
-            sale.Total = sale.Itens.Sum(i => i.PrecoUnitario * i.Quantidade);
+            sale.Total = sale.Itens.Sum(i => i.UnitPrice * i.Amount);
             Console.WriteLine($"Total calculado: {sale.Total}");
 
             await _saleRepository.CreateAsync(sale);
@@ -68,7 +68,7 @@ namespace RO.DevTest.Application.Features.Sale.Commands.CreatedSaleCommand
                 var product = await _productRepository.GetByIdAsync(item.ProductId);
                 if (product != null)
                 {
-                    product.Stock -= item.Quantidade;
+                    product.Stock -= item.Amount;
                     _productRepository.Update(product);
                 }
             }

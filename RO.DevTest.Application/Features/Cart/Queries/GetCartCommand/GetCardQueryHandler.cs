@@ -37,8 +37,8 @@ namespace RO.DevTest.Application.Features.Cart.Queries.GetCartCommand
                     {
                         ProductId = item.ProductId,
                         ProductName = product.Name,
-                        PrecoUnitario = item.PrecoUnitario,
-                        Quantidade = item.Quantidade
+                        PrecoUnitario = item.UnitPrice,
+                        Quantidade = item.Amount
                     });
                 }
             }

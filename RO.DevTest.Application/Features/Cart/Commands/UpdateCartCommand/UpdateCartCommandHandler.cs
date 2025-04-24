@@ -34,7 +34,7 @@ namespace RO.DevTest.Application.Features.Cart.Commands.UpdateCartCommand
             }
             else
             {
-                cartExists.Quantidade = request.Quantidade;
+                cartExists.Amount = request.Quantidade;
                 _cartRepository.Update(cartExists);
             }
 

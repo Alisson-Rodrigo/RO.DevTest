@@ -69,7 +69,7 @@ namespace RO.DevTest.Tests.Unit.Application.Features.Cart.Queries
             var user = new Domain.Entities.User { Id = Guid.NewGuid().ToString() };
             _mockLogged.Setup(l => l.UserLogged()).ReturnsAsync(user);
 
-            var cartItem = new CartItem { ProductId = Guid.NewGuid(), PrecoUnitario = 100, Quantidade = 2, UserId = user.Id };
+            var cartItem = new CartItem { ProductId = Guid.NewGuid(), UnitPrice = 100, Amount = 2, UserId = user.Id };
             var product = new Product { Id = cartItem.ProductId, Name = "Produto A" };
 
             _mockCartRepository.Setup(c => c.GetListAsync(user.Id.ToString())).ReturnsAsync(new List<CartItem> { cartItem }); // Carrinho com item
@@ -85,8 +85,8 @@ namespace RO.DevTest.Tests.Unit.Application.Features.Cart.Queries
             var resultItem = result[0];
             Assert.Equal(cartItem.ProductId, resultItem.ProductId); // Verifica o ID do produto
             Assert.Equal(product.Name, resultItem.ProductName); // Verifica o nome do produto
-            Assert.Equal(cartItem.PrecoUnitario, resultItem.PrecoUnitario); // Verifica o preço unitário
-            Assert.Equal(cartItem.Quantidade, resultItem.Quantidade); // Verifica a quantidade
+            Assert.Equal(cartItem.UnitPrice, resultItem.PrecoUnitario); // Verifica o preço unitário
+            Assert.Equal(cartItem.Amount, resultItem.Quantidade); // Verifica a quantidade
         }
 
         [Fact]
@@ -96,7 +96,7 @@ namespace RO.DevTest.Tests.Unit.Application.Features.Cart.Queries
             var user = new Domain.Entities.User { Id = Guid.NewGuid().ToString() };
             _mockLogged.Setup(l => l.UserLogged()).ReturnsAsync(user);
 
-            var cartItem = new CartItem { ProductId = Guid.NewGuid(), PrecoUnitario = 100, Quantidade = 2, UserId = user.Id };
+            var cartItem = new CartItem { ProductId = Guid.NewGuid(), UnitPrice = 100, Amount = 2, UserId = user.Id };
 
             _mockCartRepository.Setup(c => c.GetListAsync(user.Id.ToString())).ReturnsAsync(new List<CartItem> { cartItem }); // Carrinho com item
             _mockProductRepository.Setup(p => p.GetByIdAsync(cartItem.ProductId)).ReturnsAsync((Product)null!); // Produto não encontrado

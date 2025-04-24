@@ -34,7 +34,7 @@ namespace RO.DevTest.Application.Features.Cart.Commands
 
             if (itemExistente != null)
             {
-                itemExistente.Quantidade += request.Quantidade;
+                itemExistente.Amount += request.Quantidade;
                 _cartRepository.Update(itemExistente);
             }
             else
@@ -43,8 +43,8 @@ namespace RO.DevTest.Application.Features.Cart.Commands
                 {
                     UserId = user.Id,
                     ProductId = request.ProductId,
-                    Quantidade = request.Quantidade,
-                    PrecoUnitario = product.Price
+                    Amount = request.Quantidade,
+                    UnitPrice = product.Price
                 };
 
                 await _cartRepository.CreateAsync(novoItem, cancellationToken);

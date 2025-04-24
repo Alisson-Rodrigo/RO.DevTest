@@ -19,7 +19,7 @@ namespace RO.DevTest.Persistence.Repositories
             return await Context.Sales
                 .Include(s => s.Itens)
                 .ThenInclude(i => i.Product)
-                .Where(s => s.DataVenda >= startDate && s.DataVenda <= endDate)
+                .Where(s => s.DateSale >= startDate && s.DateSale <= endDate)
                 .ToListAsync();
         }
 

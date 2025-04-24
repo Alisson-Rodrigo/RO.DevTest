@@ -70,7 +70,7 @@ namespace RO.DevTest.Tests.Application.Features.Sales.Commands
             var user = new User { Id = _faker.Random.Guid().ToString() }; // Convertendo Guid para string
             var cartItems = new List<CartItem>
             {
-                new CartItem { ProductId = _faker.Random.Guid(), Quantidade = 1, PrecoUnitario = (float)_faker.Finance.Amount() }
+                new CartItem { ProductId = _faker.Random.Guid(), Amount = 1, UnitPrice = (float)_faker.Finance.Amount() }
             };
             _mockLogged.Setup(x => x.UserLogged()).ReturnsAsync(user);
             _mockCartRepository.Setup(x => x.GetListAsync(user.Id)).ReturnsAsync(cartItems);
@@ -89,7 +89,7 @@ namespace RO.DevTest.Tests.Application.Features.Sales.Commands
             var user = new User { Id = _faker.Random.Guid().ToString() }; 
             var cartItems = new List<CartItem>
             {
-                new CartItem { ProductId = _faker.Random.Guid(), Quantidade = 2, PrecoUnitario = (float)_faker.Finance.Amount() }
+                new CartItem { ProductId = _faker.Random.Guid(), Amount = 2, UnitPrice = (float)_faker.Finance.Amount() }
             };
             var product = new Domain.Entities.Product { Id = cartItems[0].ProductId, Stock = 10, Name = _faker.Commerce.ProductName() };
             _mockLogged.Setup(x => x.UserLogged()).ReturnsAsync(user);

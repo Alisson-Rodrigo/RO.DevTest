@@ -60,7 +60,7 @@ namespace RO.DevTest.Tests.Unit.Application.Features.Cart.Commands
             var user = new Domain.Entities.User { Id = Guid.NewGuid().ToString() };
             _mockLogged.Setup(l => l.UserLogged()).ReturnsAsync(user);
 
-            var cartItem = new CartItem { UserId = user.Id, ProductId = Guid.NewGuid(), Quantidade = 2, PrecoUnitario = 100 };
+            var cartItem = new CartItem { UserId = user.Id, ProductId = Guid.NewGuid(), Amount = 2, UnitPrice = 100 };
 
             _mockCartRepository.Setup(c => c.GetItemAsync(user.Id, It.IsAny<Guid>())).ReturnsAsync(cartItem); // Produto encontrado no carrinho
             _mockCartRepository.Setup(c => c.Delete(It.IsAny<CartItem>())).Verifiable(); // Espera-se que o Delete seja chamado

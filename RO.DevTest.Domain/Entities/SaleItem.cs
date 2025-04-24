@@ -10,8 +10,8 @@ namespace RO.DevTest.Domain.Entities
         public Guid ProductId { get; set; }
         public Product Product { get; set; } = null!;
 
-        public int Quantidade { get; set; }
-        public float PrecoUnitario { get; set; }
+        public int Amount { get; set; }
+        public float UnitPrice { get; set; }
     }
 
 }

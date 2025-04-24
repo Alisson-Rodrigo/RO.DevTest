@@ -23,7 +23,7 @@ namespace RO.DevTest.Application.Features.Sale.Queries.SalesAnalysisQueries
             var totalSales = sales.Count;
             var totalRevenue = sales
                 .SelectMany(s => s.Itens)
-                .Sum(i => i.Quantidade * i.PrecoUnitario);
+                .Sum(i => i.Amount * i.UnitPrice);
 
             var productGroups = sales
                 .SelectMany(s => s.Itens)
@@ -32,8 +32,8 @@ namespace RO.DevTest.Application.Features.Sale.Queries.SalesAnalysisQueries
                 {
                     ProductId = g.Key,
                     ProductName = g.First().Product.Name,
-                    TotalSold = g.Sum(i => i.Quantidade),
-                    TotalRevenue = g.Sum(i => i.Quantidade * i.PrecoUnitario)
+                    TotalSold = g.Sum(i => i.Amount),
+                    TotalRevenue = g.Sum(i => i.Amount * i.UnitPrice)
                 })
                 .ToList();
 
