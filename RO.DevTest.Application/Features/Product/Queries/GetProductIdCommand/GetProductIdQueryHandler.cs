@@ -18,7 +18,7 @@ namespace RO.DevTest.Application.Features.Product.Queries.GetProductIdCommand
 
         public async Task<GetProductIdResult> Handle(GetProductIdQuery command, CancellationToken cancellationToken)
         {
-            var product = _productRepository.Get(x => x.Id == command.Id);
+            var product =  _productRepository.Get(x => x.Id == command.Id);
 
             if (product == null)
             {
