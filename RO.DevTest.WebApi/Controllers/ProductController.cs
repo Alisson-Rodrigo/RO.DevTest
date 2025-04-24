@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NSwag.Annotations;
 using RO.DevTest.Application.Features.Pages;
+using RO.DevTest.Application.Features.Pages.Queries;
 using RO.DevTest.Application.Features.Product.Commands.CreatedProductCommand;
 using RO.DevTest.Application.Features.Product.Commands.DeleteProductCommand;
 using RO.DevTest.Application.Features.Product.Commands.UpdateProductCommand;

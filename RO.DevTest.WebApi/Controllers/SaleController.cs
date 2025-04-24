@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RO.DevTest.Application.Features.Cart.Commands;
 using RO.DevTest.Application.Features.Sale.Commands.CreatedSaleCommand;
+using RO.DevTest.Application.Features.Sale.Queries;
 
 namespace RO.DevTest.WebApi.Controllers
 {
@@ -21,6 +22,20 @@ namespace RO.DevTest.WebApi.Controllers
         {
             await _mediator.Send(request);
             return NoContent();
+        }
+
+        /// <summary>
+        /// Retorna análise de vendas em um período.
+        /// </summary>
+        ///
+        [Authorize(Roles = "Admin")]
+        [HttpGet("analysis")]
+        [ProducesResponseType(typeof(SalesAnalysisResult), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> GetSalesAnalysis([FromQuery] SalesAnalysisRequest request)
+        {
+            var result = await _mediator.Send(request);
+            return Ok(result);
         }
     }
 }

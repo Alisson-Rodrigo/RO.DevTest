@@ -7,5 +7,6 @@ namespace RO.DevTest.Application.Contracts.Persistance.Repositories
     {
         Task<IEnumerable<Sale>> GetAllAsync();
         Task<Sale?> GetByIdAsync(Guid id);
+        Task<List<Sale>> GetSalesByPeriod(DateTime startDate, DateTime endDate);
     }
 }

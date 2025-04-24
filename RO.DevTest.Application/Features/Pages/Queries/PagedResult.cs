@@ -1,5 +1,4 @@
-﻿
-namespace RO.DevTest.Application.Features.Pages
+﻿namespace RO.DevTest.Application.Features.Pages.Queries
 {
     public class PagedResult
     {
