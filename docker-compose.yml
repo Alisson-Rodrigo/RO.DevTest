@@ -6,11 +6,11 @@ services:
     container_name: ro_postgres
     restart: always
     environment:
-      POSTGRES_USER: ${POSTGRES_USER}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: rodevtest
     ports:
-      - "${POSTGRES_PORT_EXTERNAL:-5433}:5432"
+      - "5433:5432"
     volumes:
       - ro_postgres_data:/var/lib/postgresql/data
     networks:
