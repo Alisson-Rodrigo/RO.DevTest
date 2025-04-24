@@ -2,7 +2,7 @@
 using RO.DevTest.Domain.Enums;
 
 
-namespace RO.DevTest.Application.Features.Pages.Queries
+namespace RO.DevTest.Application.Features.Product.Queries.Pages
 {
     public class PagedRequest : IRequest<PagedResult>
     {

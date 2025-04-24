@@ -53,10 +53,10 @@ namespace RO.DevTest.Tests.Unit.Application.Features.User.Commands
                        .ReturnsAsync(existingUser);
 
             _identityAbstractorMock.Setup(x => x.FindByNameAsync(command.UserName))
-                                    .ReturnsAsync((Domain.Entities.User)null); // Nenhum usuário com esse UserName
+                                    .ReturnsAsync((Domain.Entities.User)null!); // Nenhum usuário com esse UserName
 
             _identityAbstractorMock.Setup(x => x.FindUserByEmailAsync(command.Email))
-                                    .ReturnsAsync((Domain.Entities.User)null); // Nenhum usuário com esse email
+                                    .ReturnsAsync((Domain.Entities.User)null!); // Nenhum usuário com esse email
 
             _identityAbstractorMock.Setup(x => x.UpdateUserAsync(It.IsAny<Domain.Entities.User>()))
                                     .ReturnsAsync(IdentityResult.Success);
@@ -106,7 +106,7 @@ namespace RO.DevTest.Tests.Unit.Application.Features.User.Commands
                        .ReturnsAsync(loggedUser);
 
             _identityAbstractorMock.Setup(x => x.FindByNameAsync(command.UserName))
-                                   .ReturnsAsync((Domain.Entities.User)null);
+                                   .ReturnsAsync((Domain.Entities.User)null!);
 
             _identityAbstractorMock.Setup(x => x.FindUserByEmailAsync(command.Email))
                                    .ReturnsAsync(userComMesmoEmail);

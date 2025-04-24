@@ -10,7 +10,7 @@ namespace RO.DevTest.Persistence.Repositories
     public class ProductRepository(DefaultContext context)
         : BaseRepository<Product>(context), IProductRepository
     {
-        public async Task<List<Product>> GetAllActiveProducts(Expression<Func<Product, bool>> predicate = null, params Expression<Func<Product, object>>[] includes)
+        public async Task<List<Product>> GetAllActiveProducts(Expression<Func<Product, bool>> predicate = null!, params Expression<Func<Product, object>>[] includes)
         {
             IQueryable<Product> query = Context.Set<Product>().Where(x => x.IsActive);
 

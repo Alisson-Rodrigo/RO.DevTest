@@ -41,7 +41,7 @@ namespace RO.DevTest.Tests.Application.Features.Sales.Commands
         [Fact]
         public async Task Handle_WhenUserIsNotAuthenticated_ShouldThrowBadRequestException()
         {
-            _mockLogged.Setup(x => x.UserLogged()).ReturnsAsync((User)null); // Usando 'User' no lugar de 'ApplicationUser'
+            _mockLogged.Setup(x => x.UserLogged()).ReturnsAsync((User)null!); // Usando 'User' no lugar de 'ApplicationUser'
 
             var exception = await Assert.ThrowsAsync<BadRequestException>(() =>
                 _handler.Handle(new CreatedSaleCommand(), CancellationToken.None)
@@ -74,7 +74,7 @@ namespace RO.DevTest.Tests.Application.Features.Sales.Commands
             };
             _mockLogged.Setup(x => x.UserLogged()).ReturnsAsync(user);
             _mockCartRepository.Setup(x => x.GetListAsync(user.Id)).ReturnsAsync(cartItems);
-            _mockProductRepository.Setup(x => x.GetByIdAsync(It.IsAny<Guid>())).ReturnsAsync((Product)null);
+            _mockProductRepository.Setup(x => x.GetByIdAsync(It.IsAny<Guid>()))!.ReturnsAsync((Domain.Entities.Product?)null);
 
             var exception = await Assert.ThrowsAsync<BadRequestException>(() =>
                 _handler.Handle(new CreatedSaleCommand(), CancellationToken.None)
@@ -91,18 +91,18 @@ namespace RO.DevTest.Tests.Application.Features.Sales.Commands
             {
                 new CartItem { ProductId = _faker.Random.Guid(), Quantidade = 2, PrecoUnitario = (float)_faker.Finance.Amount() }
             };
-            var product = new Product { Id = cartItems[0].ProductId, Stock = 10, Name = _faker.Commerce.ProductName() };
+            var product = new Domain.Entities.Product { Id = cartItems[0].ProductId, Stock = 10, Name = _faker.Commerce.ProductName() };
             _mockLogged.Setup(x => x.UserLogged()).ReturnsAsync(user);
             _mockCartRepository.Setup(x => x.GetListAsync(user.Id)).ReturnsAsync(cartItems);
             _mockProductRepository.Setup(x => x.GetByIdAsync(cartItems[0].ProductId)).ReturnsAsync(product);
             _mockSaleRepository.Setup(x => x.CreateAsync(It.IsAny<Sale>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(new Sale { Id = _faker.Random.Guid() });
-            _mockProductRepository.Setup(x => x.Update(It.IsAny<Product>())).Verifiable();
+            _mockProductRepository.Setup(x => x.Update(It.IsAny<Domain.Entities.Product>())).Verifiable();
 
             var saleId = await _handler.Handle(new CreatedSaleCommand(), CancellationToken.None);
 
             Assert.NotEqual(Guid.Empty, saleId);
-            _mockProductRepository.Verify(x => x.Update(It.IsAny<Product>()), Times.Once);
+            _mockProductRepository.Verify(x => x.Update(It.IsAny<Domain.Entities.Product>()), Times.Once);
         }
     }
 }

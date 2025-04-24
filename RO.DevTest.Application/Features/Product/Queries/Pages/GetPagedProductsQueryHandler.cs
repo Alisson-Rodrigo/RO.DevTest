@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using RO.DevTest.Application.Contracts.Persistance.Repositories;
 
-namespace RO.DevTest.Application.Features.Pages.Queries
+namespace RO.DevTest.Application.Features.Product.Queries.Pages
 {
     public class GetPagedProductsQueryHandler : IRequestHandler<PagedRequest, PagedResult>
     {
