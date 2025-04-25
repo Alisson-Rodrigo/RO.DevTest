@@ -8,8 +8,9 @@ namespace RO.DevTest.Application.Contracts.Persistance.Repositories
     {
         Task<List<Product>> GetAllActiveProducts(Expression<Func<Product, bool>> predicate = null!, params Expression<Func<Product, object>>[] includes);
         Task<Product?> GetByIdAsync(Guid id);
-        Task<List<Product>> GetPagedAsync(int page, int pageSize, string? orderBy, bool ascending, string? search);
-        Task<int> GetTotalCountAsync(string? search);
+        Task<List<Product>> GetPagedAsync(int page, int pageSize, string? orderBy, bool ascending, string? search, float? minPrice, float? maxPrice, CategoriesProduct? categoryId);
+        Task<int> GetTotalCountAsync(string? search, float? minPrice, float? maxPrice, CategoriesProduct? categoryId);
+
 
     }
 }

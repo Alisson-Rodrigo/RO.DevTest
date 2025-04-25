@@ -11,5 +11,8 @@ namespace RO.DevTest.Application.Features.Product.Queries.Pages
         public string? OrderBy { get; set; }
         public bool Ascending { get; set; } = true;
         public string? Search { get; set; }
+        public float? MinPrice { get; set; }
+        public float? MaxPrice { get; set; }
+        public CategoriesProduct? CategoryId { get; set; }
     }
 }
