@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\.github\\workflows",
+    "\\backend",
+    "\\backend\\RO.DevTest.WebApi"
   ],
-  "SelectedNode": "\\RO.DevTest.sln",
+  "SelectedNode": "\\backend\\RO.DevTest.WebApi\\appsettings.Development.json",
   "PreviewInSolutionExplorer": false
 }
