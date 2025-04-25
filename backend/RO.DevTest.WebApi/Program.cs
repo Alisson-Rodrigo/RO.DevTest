@@ -32,8 +32,8 @@ public class Program
                               "Example: 'Bearer 12345abcdef'",
                 Name = "Authorization",
                 In = ParameterLocation.Header,
-                Type = SecuritySchemeType.ApiKey,
-                Scheme = "Bearer"
+                Type = SecuritySchemeType.Http,
+                Scheme = "bearer",              
             });
 
             c.AddSecurityRequirement(new OpenApiSecurityRequirement()
