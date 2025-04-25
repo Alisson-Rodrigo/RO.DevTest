@@ -14,6 +14,21 @@ services:
     networks:
       - ro_network
 
+  web:
+    build:
+      context: .
+      dockerfile: RO.DevTest.WebApi/Dockerfile
+    container_name: ro_api
+    ports:
+      - "8080:80"
+    depends_on:
+      - postgres
+    networks:
+      - ro_network
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__PostgreSQL=Host=postgres;Port=5432;Database=rodevtest;Username=postgres;Password=1234;
+
 volumes:
   ro_postgres_data:
 
