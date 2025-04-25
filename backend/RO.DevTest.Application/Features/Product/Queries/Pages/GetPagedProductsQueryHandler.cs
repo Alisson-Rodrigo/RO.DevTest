@@ -19,10 +19,18 @@ namespace RO.DevTest.Application.Features.Product.Queries.Pages
                 request.PageSize,
                 request.OrderBy,
                 request.Ascending,
-                request.Search
+                request.Search,
+                request.MinPrice,
+                request.MaxPrice,
+                request.CategoryId
             );
 
-            var totalItems = await _productRepository.GetTotalCountAsync(request.Search);
+            var totalItems = await _productRepository.GetTotalCountAsync(
+                request.Search,
+                request.MinPrice,
+                request.MaxPrice,
+                request.CategoryId
+            );
 
             return new PagedResult
             {
@@ -32,6 +40,7 @@ namespace RO.DevTest.Application.Features.Product.Queries.Pages
                 Items = items
             };
         }
+
     }
 
 }

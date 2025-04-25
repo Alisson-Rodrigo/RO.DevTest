@@ -32,12 +32,21 @@ namespace RO.DevTest.Persistence.Repositories
             return await Context.Products.FirstOrDefaultAsync(p => p.Id == id);
         }
 
-        public async Task<List<Product>> GetPagedAsync(int page, int pageSize, string? orderBy, bool ascending, string? search)
+        public async Task<List<Product>> GetPagedAsync(int page, int pageSize, string? orderBy, bool ascending, string? search, float? minPrice, float? maxPrice, CategoriesProduct? categoryId)
         {
             var query = Context.Products.AsQueryable();
 
             if (!string.IsNullOrWhiteSpace(search))
                 query = query.Where(p => p.Name.Contains(search));
+
+            if (minPrice.HasValue)
+                query = query.Where(p => p.Price >= minPrice.Value);
+
+            if (maxPrice.HasValue)
+                query = query.Where(p => p.Price <= maxPrice.Value);
+
+            if (categoryId.HasValue)
+                query = query.Where(p => p.Category == categoryId.Value);
 
             query = orderBy?.ToLower() switch
             {
@@ -50,17 +59,28 @@ namespace RO.DevTest.Persistence.Repositories
                 .Skip((page - 1) * pageSize)
                 .Take(pageSize)
                 .ToListAsync();
-        } 
+        }
 
-        public async Task<int> GetTotalCountAsync(string? search)
+
+        public async Task<int> GetTotalCountAsync(string? search, float? minPrice, float? maxPrice, CategoriesProduct? categoryId)
         {
             var query = Context.Products.AsQueryable();
 
             if (!string.IsNullOrWhiteSpace(search))
                 query = query.Where(p => p.Name.Contains(search));
 
+            if (minPrice.HasValue)
+                query = query.Where(p => p.Price >= minPrice.Value);
+
+            if (maxPrice.HasValue)
+                query = query.Where(p => p.Price <= maxPrice.Value);
+
+            if (categoryId.HasValue)
+                query = query.Where(p => p.Category == categoryId.Value);
+
             return await query.CountAsync();
         }
+
 
 
     }
