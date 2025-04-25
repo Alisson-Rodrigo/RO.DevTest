@@ -1,4 +1,3 @@
-version: '3.8'
 
 services:
   postgres:
@@ -10,23 +9,25 @@ services:
       POSTGRES_PASSWORD: 1234
       POSTGRES_DB: rodevtest
     ports:
-      - "5433:5432"  # Mapeando a porta 5433 do host para 5432 do container
+      - "5433:5432"               # host:container
     volumes:
       - ro_postgres_data:/var/lib/postgresql/data
     networks:
-      - ro_network
+      - ro_network               # rede compartilhada
 
   webapi:
-    image: rodevtestwebapi:dev  # Usando a imagem do backend já criada
+    image: rodevtestwebapi:dev   # sua imagem pronta
+    container_name: ro_webapi
     depends_on:
       - postgres
     environment:
-      - ConnectionStrings__PostgreSQL=Host=postgres;Port=5432;Database=rodevtest;Username=postgres;Password=1234;
+      # Certifique-se de usar o mesmo nome usado no GetConnectionString(...)
+      - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=rodevtest;Username=postgres;Password=1234;
     ports:
       - "8080:8080"
       - "8081:8081"
     networks:
-      - ro_network
+      - ro_network               # mesma rede do postgres
 
 volumes:
   ro_postgres_data:
@@ -34,4 +35,5 @@ volumes:
 
 networks:
   ro_network:
+    name: ro_network            # força o nome limpo
     driver: bridge
