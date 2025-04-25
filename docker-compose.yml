@@ -1,3 +1,5 @@
+version: '3.8'
+
 services:
   postgres:
     image: postgres:latest
@@ -8,14 +10,28 @@ services:
       POSTGRES_PASSWORD: 1234
       POSTGRES_DB: rodevtest
     ports:
-      - "5433:5432"
+      - "5433:5432"  # Mapeando a porta 5433 do host para 5432 do container
     volumes:
       - ro_postgres_data:/var/lib/postgresql/data
     networks:
       - ro_network
 
+  webapi:
+    image: rodevtestwebapi:dev  # Usando a imagem do backend já criada
+    depends_on:
+      - postgres
+    environment:
+      - ConnectionStrings__PostgreSQL=Host=postgres;Port=5432;Database=rodevtest;Username=postgres;Password=1234;
+    ports:
+      - "8080:8080"
+      - "8081:8081"
+    networks:
+      - ro_network
+
 volumes:
   ro_postgres_data:
+    driver: local
 
 networks:
   ro_network:
+    driver: bridge
