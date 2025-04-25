@@ -1,7 +1,6 @@
 {
   "ExpandedNodes": [
     "",
-    "\\.github\\workflows",
     "\\backend",
     "\\backend\\RO.DevTest.WebApi"
   ],

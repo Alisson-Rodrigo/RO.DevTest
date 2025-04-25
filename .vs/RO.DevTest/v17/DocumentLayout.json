@@ -343,12 +343,7 @@
               "RelativeToolTip": "app\\.gitignore",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-04-25T21:02:44.133Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+              "WhenOpened": "2025-04-25T21:02:44.133Z"
             },
             {
               "$type": "Bookmark",
@@ -368,8 +363,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Tests\\RO.DevTest.Tests.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-23T03:04:54.836Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T03:04:54.836Z"
             },
             {
               "$type": "Document",
@@ -381,8 +375,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Application\\Features\\Sale\\Commands\\CreatedSaleCommand\\CreatedSaleCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T02:37:28.139Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T02:37:28.139Z"
             },
             {
               "$type": "Document",
@@ -394,8 +387,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.WebApi\\Program.cs",
               "ViewState": "AgIAAHkAAAAAAAAAAAAQwH4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T02:27:06.025Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T02:27:06.025Z"
             },
             {
               "$type": "Document",
@@ -407,8 +399,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Application\\Features\\Cart\\Queries\\GetCartCommand\\GetCardQueryHandler.cs",
               "ViewState": "AgIAABcAAAAAAAAAAAAqwCgAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T17:09:33.397Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T17:09:33.397Z"
             },
             {
               "$type": "Document",
@@ -420,8 +411,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.WebApi\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-24T14:47:03.913Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T14:47:03.913Z"
             },
             {
               "$type": "Document",
@@ -433,8 +423,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.WebApi\\appsettings.Development.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-25T03:14:56.128Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-25T03:14:56.128Z"
             },
             {
               "$type": "Document",
@@ -446,8 +435,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.WebApi\\Dockerfile",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-04-25T03:12:02.366Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-25T03:12:02.366Z"
             },
             {
               "$type": "Document",
@@ -459,8 +447,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Application\\Features\\Sale\\Commands\\CreatedSaleCommand\\CreatedSaleCommandHandler.cs",
               "ViewState": "AgIAADMAAAAAAAAAAAAYwEsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T23:35:54.476Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T23:35:54.476Z"
             },
             {
               "$type": "Document",
@@ -472,8 +459,7 @@
               "RelativeToolTip": "backend\\README.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2025-04-24T20:53:07.996Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T20:53:07.996Z"
             },
             {
               "$type": "Document",
@@ -485,8 +471,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.WebApi\\RO.DevTest.WebApi.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABTAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-23T02:25:13.937Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T02:25:13.937Z"
             },
             {
               "$type": "Document",
@@ -498,8 +483,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Tests\\Unit\\Application\\Features\\Sales\\Commands\\DeleteCartCommandHandlerTests.cs",
               "ViewState": "AgIAAC8AAAAAAAAAAAAmwD4AAABtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T17:33:22.625Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T17:33:22.625Z"
             },
             {
               "$type": "Document",
@@ -511,8 +495,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Tests\\Unit\\Application\\Features\\Sales\\Commands\\UpdateCartCommandHandlerTests.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T17:37:13.845Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T17:37:13.845Z"
             },
             {
               "$type": "Document",
@@ -524,8 +507,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Tests\\Unit\\Application\\Features\\Cart\\Queries\\GetCartQueryHandlerTests.cs",
               "ViewState": "AgIAAEcAAAAAAAAAAAAqwFcAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T17:36:53.308Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T17:36:53.308Z"
             },
             {
               "$type": "Document",
@@ -537,8 +519,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Application\\Features\\Cart\\Commands\\UpdateCartCommand\\UpdateCartCommandHandler.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAqwCQAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T17:07:36.923Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T17:07:36.923Z"
             },
             {
               "$type": "Document",
@@ -550,8 +531,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Tests\\Unit\\Application\\Features\\Cart\\Commands\\CreatedCartCommandHandlerTests.cs",
               "ViewState": "AgIAACIAAAAAAAAAAAAmwHMAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T17:33:26.954Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T17:33:26.954Z"
             },
             {
               "$type": "Document",
@@ -563,8 +543,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Tests\\Unit\\Application\\Features\\Sales\\Commands\\CreateSaleCommandHandlerTests.cs",
               "ViewState": "AgIAAEwAAAAAAAAAAAAmwFsAAABWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T16:24:53.734Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T16:24:53.734Z"
             },
             {
               "$type": "Document",
@@ -576,8 +555,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Application\\Features\\Cart\\Commands\\CreatedCartCommand\\CreatedCartCommandHandler.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAA8wCQAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T02:50:12.156Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T02:50:12.156Z"
             },
             {
               "$type": "Document",
@@ -589,8 +567,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Domain\\Entities\\Product.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T02:08:02.511Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T02:08:02.511Z"
             },
             {
               "$type": "Document",
@@ -602,8 +579,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Application\\Contracts\\Persistance\\Repositories\\ISaleRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T00:03:20.402Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T00:03:20.402Z"
             },
             {
               "$type": "Document",
@@ -615,8 +591,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Domain\\Entities\\Cart.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T01:58:53.004Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T01:58:53.004Z"
             },
             {
               "$type": "Document",
@@ -628,8 +603,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Domain\\Entities\\Sale.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T02:37:38.993Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T02:37:38.993Z"
             },
             {
               "$type": "Document",
@@ -641,8 +615,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Domain\\Entities\\SaleItem.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T02:52:53.454Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T02:52:53.454Z"
             },
             {
               "$type": "Document",
@@ -654,8 +627,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Tests\\Unit\\Application\\Features\\Sales\\Queries\\SalesAnalysisHandlerTests.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T17:28:35.745Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T17:28:35.745Z"
             },
             {
               "$type": "Document",
@@ -667,8 +639,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Application\\Features\\Product\\Queries\\GetProductIdCommand\\GetProductIdQueryHandler.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAcwBQAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T16:47:57.347Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T16:47:57.347Z"
             },
             {
               "$type": "Document",
@@ -680,8 +651,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Application\\Contracts\\Persistance\\Repositories\\IUserRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T17:30:53.768Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T17:30:53.768Z"
             },
             {
               "$type": "Document",
@@ -693,8 +663,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Application\\Features\\Sale\\Queries\\SalesAnalysisQueries\\SalesAnalysisHandler.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAqwCMAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T17:31:55.503Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T17:31:55.503Z"
             },
             {
               "$type": "Document",
@@ -706,8 +675,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Persistence\\Repositories\\SaleRepository.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAUwBUAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T00:03:54.616Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T00:03:54.616Z"
             },
             {
               "$type": "Document",
@@ -719,8 +687,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Infrastructure\\RO.DevTest.Infrastructure.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-23T03:05:06.941Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T03:05:06.941Z"
             },
             {
               "$type": "Document",
@@ -732,8 +699,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Application\\Features\\Product\\Queries\\GetProductIdCommand\\GetProductIdQuery.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T17:15:54.069Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T17:15:54.069Z"
             },
             {
               "$type": "Document",
@@ -745,8 +711,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Application\\ApplicationLayer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T03:05:04.285Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T03:05:04.285Z"
             },
             {
               "$type": "Document",
@@ -758,8 +723,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Domain\\Entities\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T13:33:53.49Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T13:33:53.49Z"
             },
             {
               "$type": "Document",
@@ -771,8 +735,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Application\\Services\\TokenJwt\\TokenService.cs",
               "ViewState": "AgIAAC0AAAAAAAAAAAAmwDwAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T14:11:28.563Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T14:11:28.563Z"
             },
             {
               "$type": "Document",
@@ -784,8 +747,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Application\\Services\\SMTPEmail\\Send.cs",
               "ViewState": "AgIAADEAAAAAAAAAAAAqwEEAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T14:39:24.256Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T14:39:24.256Z"
             },
             {
               "$type": "Document",
@@ -797,8 +759,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Application\\Features\\User\\Queries\\GetUserCommand\\GetUserCommandHandler.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAiwBgAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T15:50:17.018Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T15:50:17.018Z"
             },
             {
               "$type": "Document",
@@ -810,8 +771,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Application\\Contracts\\Persistance\\Repositories\\IProductRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAABjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T02:07:08.582Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T02:07:08.582Z"
             },
             {
               "$type": "Document",
@@ -823,8 +783,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Persistence\\Repositories\\ProductRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAABwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T02:03:47.749Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T02:03:47.749Z"
             },
             {
               "$type": "Document",
@@ -836,8 +795,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.WebApi\\Controllers\\ProductController.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAAwDkAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T03:27:49.254Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T03:27:49.254Z"
             },
             {
               "$type": "Document",
@@ -849,8 +807,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Application\\Features\\Product\\Queries\\GetProductIdCommand\\GetProductIdResult.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T17:16:00.862Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T17:16:00.862Z"
             },
             {
               "$type": "Document",
@@ -862,8 +819,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Tests\\Unit\\Application\\Features\\User\\Commands\\UpdateUserCommandHandlerTests.cs",
               "ViewState": "AgIAAFwAAAAAAAAAAAAqwGwAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T16:59:33.117Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T16:59:33.117Z"
             },
             {
               "$type": "Document",
@@ -875,8 +831,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Application\\Features\\Cart\\Commands\\DeleteCartCommand\\DeleteCartCommandHandler.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAIwCMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T02:12:41.613Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T02:12:41.613Z"
             },
             {
               "$type": "Document",
@@ -888,8 +843,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Tests\\Unit\\Application\\Features\\User\\Commands\\CreateUserCommandHandlerTests.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAYwC8AAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T03:03:39.744Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T03:03:39.744Z"
             },
             {
               "$type": "Document",
@@ -901,8 +855,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Application\\Features\\Product\\Queries\\GetAllProductCommand\\GetAllProductQueryHandler.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAmwB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T16:43:20.94Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T16:43:20.94Z"
             },
             {
               "$type": "Document",
@@ -914,8 +867,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Application\\Features\\Product\\Commands\\UpdateProductCommand\\UpdateProductCommandHandler.cs",
               "ViewState": "AgIAADoAAAAAAAAAAAAAAFkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T16:36:19.375Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T16:36:19.375Z"
             },
             {
               "$type": "Document",
@@ -927,8 +879,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Application\\Features\\Product\\Commands\\DeleteProductCommand\\DeleteProductCommandHandler.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAmwCwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T16:30:19.421Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T16:30:19.421Z"
             },
             {
               "$type": "Document",
@@ -940,8 +891,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Application\\Features\\Product\\Commands\\CreatedProductCommand\\CreateProductCommandHandler.cs",
               "ViewState": "AgIAACoAAAAAAAAAAAAqwEIAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T16:22:14.052Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T16:22:14.052Z"
             },
             {
               "$type": "Document",
@@ -953,8 +903,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Application\\Features\\Product\\Commands\\CreatedProductCommand\\CreatedProductCommandValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T16:22:12.188Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T16:22:12.188Z"
             },
             {
               "$type": "Document",
@@ -966,8 +915,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Application\\Features\\User\\Queries\\GetIdUserCommand\\GetUserIdCommandHandler.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAqwCYAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T15:52:27.552Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T15:52:27.552Z"
             },
             {
               "$type": "Document",
@@ -979,8 +927,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Domain\\Exception\\ForbiddenException.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T02:29:40.123Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T02:29:40.123Z"
             },
             {
               "$type": "Document",
@@ -992,8 +939,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Application\\Features\\User\\Queries\\GetIdUserCommand\\GetUserIdResult.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T15:54:34.296Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T15:54:34.296Z"
             },
             {
               "$type": "Document",
@@ -1005,8 +951,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Application\\Features\\User\\Queries\\GetIdUserCommand\\GetUserIdCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T15:54:46.663Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T15:54:46.663Z"
             },
             {
               "$type": "Document",
@@ -1018,8 +963,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Domain\\Exception\\BadRequestException.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T02:26:32.82Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T02:26:32.82Z"
             },
             {
               "$type": "Document",
@@ -1031,8 +975,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Application\\Features\\User\\Commands\\UpdateUserCommand\\UpdateUserResult.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T15:46:46.143Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T15:46:46.143Z"
             },
             {
               "$type": "Document",
@@ -1044,8 +987,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Application\\Features\\User\\Commands\\UpdateUserCommand\\UpdateUserCommand.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAUwBoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T15:40:41.403Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T15:40:41.403Z"
             },
             {
               "$type": "Document",
@@ -1057,8 +999,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Application\\Features\\User\\Commands\\UpdateUserCommand\\UpdateUserCommandHandler.cs",
               "ViewState": "AgIAABAAAAAAAAAAAIA0wCMAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T15:40:26.315Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T15:40:26.315Z"
             },
             {
               "$type": "Document",
@@ -1070,8 +1011,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Application\\Features\\User\\Commands\\UpdateUserCommand\\UpdateUserCommandValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T15:40:25.576Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T15:40:25.576Z"
             },
             {
               "$type": "Document",
@@ -1083,8 +1023,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Application\\Features\\User\\Commands\\DeleteUserCommand\\DeleteUserCommandHandler.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAcwBwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T15:36:49.774Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T15:36:49.774Z"
             },
             {
               "$type": "Document",
@@ -1096,8 +1035,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Application\\Features\\Auth\\Commands\\UpdatePasswordCommand\\UpdatePasswordHandler.cs",
               "ViewState": "AgIAACwAAAAAAAAAAAAqwEkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T14:17:10.956Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T14:17:10.956Z"
             },
             {
               "$type": "Document",
@@ -1109,8 +1047,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Application\\IoC\\ApplicationDependencyInjector.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T14:15:48.591Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T14:15:48.591Z"
             },
             {
               "$type": "Document",
@@ -1122,8 +1059,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Application\\Services\\LoggedUser\\Logged.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T14:58:45.874Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T14:58:45.874Z"
             },
             {
               "$type": "Document",
@@ -1135,8 +1071,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Application\\Features\\Auth\\Commands\\ResetPassword\\ResetPasswordCommandHandler.cs",
               "ViewState": "AgIAADEAAAAAAAAAAAAuwE8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T14:16:20.013Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T14:16:20.013Z"
             },
             {
               "$type": "Document",
@@ -1148,8 +1083,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Application\\Features\\Auth\\Commands\\LoginCommand\\LoginResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T14:16:17.373Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T14:16:17.373Z"
             },
             {
               "$type": "Document",
@@ -1161,8 +1095,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Application\\Features\\Auth\\Commands\\LoginCommand\\LoginCommandHandler.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAYwCoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T14:01:52.329Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T14:01:52.329Z"
             },
             {
               "$type": "Document",
@@ -1174,8 +1107,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Domain\\Abstract\\BaseEntity.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAxwAIAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T02:45:39.53Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T02:45:39.53Z"
             },
             {
               "$type": "Document",
@@ -1187,8 +1119,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Domain\\Exception\\ApiException.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T02:29:41.49Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T02:29:41.49Z"
             },
             {
               "$type": "Document",
@@ -1200,8 +1131,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Domain\\Enums\\CategoriesProduct.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T02:45:45.956Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T02:45:45.956Z"
             },
             {
               "$type": "Document",
@@ -1213,8 +1143,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Domain\\Enums\\UserRoles.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T02:45:46.695Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T02:45:46.695Z"
             },
             {
               "$type": "Document",
@@ -1226,8 +1155,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.WebApi\\Controllers\\SaleController.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAQwCkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T23:35:54.453Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T23:35:54.453Z"
             },
             {
               "$type": "Document",
@@ -1239,8 +1167,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Infrastructure\\Abstractions\\IdentityAbstractor.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAQwCAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T03:05:10.615Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T03:05:10.615Z"
             },
             {
               "$type": "Document",
@@ -1252,8 +1179,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.WebApi\\Controllers\\UsersController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T03:27:54.83Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T03:27:54.83Z"
             },
             {
               "$type": "Document",
@@ -1265,8 +1191,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.WebApi\\Controllers\\CartController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T01:58:59.168Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T01:58:59.168Z"
             },
             {
               "$type": "Document",
@@ -1278,8 +1203,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Application\\Features\\Cart\\Commands\\CreatedCartCommand\\CreatedCartCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T02:52:01.021Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T02:52:01.021Z"
             },
             {
               "$type": "Document",
@@ -1291,8 +1215,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Persistence\\DefaultContext.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAAwDIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T02:37:55.732Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T02:37:55.732Z"
             },
             {
               "$type": "Document",
@@ -1304,8 +1227,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.Application\\Features\\Cart\\Commands\\DeleteCartCommand\\DeleteCartCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T02:12:39.22Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T02:12:39.22Z"
             },
             {
               "$type": "Document",
@@ -1317,8 +1239,7 @@
               "RelativeToolTip": "backend\\RO.DevTest.WebApi\\Controllers\\AuthController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T01:59:29.268Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T01:59:29.268Z"
             },
             {
               "$type": "Document",
@@ -1330,8 +1251,11 @@
               "RelativeToolTip": "backend\\RO.DevTest.Persistence\\IoC\\PersistenceDependencyInjector.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAAwB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T01:57:56.748Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T01:57:56.748Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             }
           ]
         }
