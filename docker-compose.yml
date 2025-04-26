@@ -1,0 +1,35 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: RO.DevTest.WebApi/Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - ConnectionStrings__PostgreSQL=Host=postgres;Port=5432;Database=rodevtest;Username=postgres;Password=1234;
+      - ASPNETCORE_ENVIRONMENT=Development
+      - APPLY_MIGRATIONS=TRUE
+    depends_on:
+      - postgres
+    networks:
+      - ro-dev-net
+
+  postgres:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_DB: rodevtest
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - ro-dev-net
+
+networks:
+  ro-dev-net:
+
+volumes:
+  pgdata:

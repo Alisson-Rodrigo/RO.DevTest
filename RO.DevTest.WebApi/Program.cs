@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using RO.DevTest.Application;
@@ -126,15 +127,22 @@ public class Program
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.
-        if (app.Environment.IsDevelopment())
+        app.UseSwagger();
+        app.UseSwaggerUI(c =>
         {
-            app.UseSwagger();
-            app.UseSwaggerUI(c =>
+            c.SwaggerEndpoint("/swagger/v1/swagger.json", "RO.DevTest API V1");
+            c.OAuthClientId("swagger-ui");
+            c.OAuthAppName("Swagger UI");
+        });
+
+        var applyMigrations = builder.Configuration.GetValue<bool>("APPLY_MIGRATIONS");
+        if (applyMigrations)
+        {
+            using (var scope = app.Services.CreateScope())
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "RO.DevTest API V1");
-                c.OAuthClientId("swagger-ui");
-                c.OAuthAppName("Swagger UI");
-            });
+                var db = scope.ServiceProvider.GetRequiredService<DefaultContext>();
+                db.Database.Migrate();
+            }
         }
 
         app.UseHttpsRedirection();
