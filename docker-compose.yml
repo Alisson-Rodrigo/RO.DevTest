@@ -11,6 +11,8 @@ services:
       - APPLY_MIGRATIONS=TRUE
     depends_on:
       - postgres
+    volumes:
+      - ./RO.DevTest.WebApi/wwwroot:/app/wwwroot
     networks:
       - ro-dev-net
 

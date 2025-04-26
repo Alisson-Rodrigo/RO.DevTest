@@ -46,8 +46,8 @@ namespace RO.DevTest.Application.Services.SMTPEmail
                     <html>
                         <body>
                             <p>Olá,</p>
-                            <p>Para redefinir sua senha, clique no link abaixo:</p>
-                            <p><a href='{recoveryLink}'>Recuperar Senha</a></p>
+                            <p>Para redefinir sua senha, insira o token no swagger:</p>
+                            <p>Token: {recoveryLink}</p>
                             <p>Se você não solicitou a recuperação, ignore este e-mail.</p>
                         </body>
                     </html>";
@@ -65,7 +65,6 @@ namespace RO.DevTest.Application.Services.SMTPEmail
             }
             catch (Exception)
             {
-                // Log detalhado para debug (em produção, opte por log sem detalhes sensíveis)
                 return false;
             }
         }

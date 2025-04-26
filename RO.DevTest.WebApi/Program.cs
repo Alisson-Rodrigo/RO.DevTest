@@ -8,6 +8,8 @@ using RO.DevTest.Infrastructure.IoC;
 using RO.DevTest.Persistence.IoC;
 using System.Security.Claims;
 using System.Text;
+using Microsoft.Extensions.FileProviders;
+
 
 namespace RO.DevTest.WebApi;
 
@@ -145,10 +147,19 @@ public class Program
             }
         }
 
+        app.UseStaticFiles();
+
+        // Serve arquivos da pasta 'wwwroot/products/images' com uma URL base personalizada
+        app.UseStaticFiles(new StaticFileOptions
+        {
+            FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot")),
+            RequestPath = "/products/images"
+        });
+
+        app.UseCors("AllowAll");
         app.UseHttpsRedirection();
         app.UseMiddleware<CustomExceptionMiddleware>();
         app.UseRouting();
-        app.UseStaticFiles();
         app.UseAuthentication();
         app.UseAuthorization();
 

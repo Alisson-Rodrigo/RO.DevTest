@@ -30,7 +30,7 @@ namespace RO.DevTest.Application.Features.Product.Commands.CreatedProductCommand
                 Directory.CreateDirectory(pasta);
 
             var imagensUrls = new List<string>();
-            const string UrlBase = "https://localhost:7014/products/images/";
+            const string UrlBase = "https://localhost:8080/products/images/";
 
             if (command.Imagens != null && command.Imagens.Any())
             {

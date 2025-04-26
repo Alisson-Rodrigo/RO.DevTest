@@ -63,8 +63,7 @@ namespace RO.DevTest.Application.Features.Auth.Commands.UpdatePasswordCommand
 
             var token = await _tokenService.GeneratePasswordResetToken(user);
 
-            var baseUrl = _configuration.GetValue<string>("AppSettings:PasswordResetUrl");
-            var recoveryLink = $"{baseUrl}?token={token}";
+            var recoveryLink = $"{token}";
 
             bool responseEmail = _send.SendRecoveryEmail(command.Email.Trim(), recoveryLink);
 
