@@ -21,8 +21,6 @@ RUN dotnet restore "./RO.DevTest.WebApi/RO.DevTest.WebApi.csproj"
 COPY . .
 WORKDIR "/src/RO.DevTest.WebApi"
 RUN dotnet build "./RO.DevTest.WebApi.csproj" -c $BUILD_CONFIGURATION -o /app/build
-RUN mkdir -p /app/wwwroot/products/images && \
-    chmod -R 777 /app/wwwroot/products/images
 
 
 

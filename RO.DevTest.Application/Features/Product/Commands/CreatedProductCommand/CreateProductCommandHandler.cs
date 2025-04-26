@@ -25,12 +25,12 @@ namespace RO.DevTest.Application.Features.Product.Commands.CreatedProductCommand
 
             await ValidateProduct(command, cancellationToken);
 
-            var pasta = Path.Combine("wwwroot", "products", "images");
+            var pasta = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "products", "images");
             if (!Directory.Exists(pasta))
                 Directory.CreateDirectory(pasta);
 
             var imagensUrls = new List<string>();
-            const string UrlBase = "https://localhost:8080/products/images/";
+            const string UrlBase = "http://localhost:8080/products/images/";
 
             if (command.Imagens != null && command.Imagens.Any())
             {
