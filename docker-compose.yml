@@ -20,7 +20,7 @@ services:
       dockerfile: RO.DevTest.WebApi/Dockerfile
     container_name: ro_api
     ports:
-      - "8080:80"
+      - "8082:80"
     depends_on:
       - postgres
     networks:
