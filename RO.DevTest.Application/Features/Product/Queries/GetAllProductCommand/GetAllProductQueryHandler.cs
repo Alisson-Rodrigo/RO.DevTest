@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Http;
 using RO.DevTest.Application.Contracts.Persistance.Repositories;
+using RO.DevTest.Domain.Exception;
 
 namespace RO.DevTest.Application.Features.Product.Queries.GetAllProductCommand
 {
@@ -21,7 +22,7 @@ namespace RO.DevTest.Application.Features.Product.Queries.GetAllProductCommand
 
             if (!products.Any())
             {
-                throw new BadHttpRequestException("Não há produtos cadastrados.");
+                throw new BadRequestException("Não há produtos cadastrados.");
             }
 
             return products.Select(product => new GetAllProductResult(product)).ToList();

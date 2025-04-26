@@ -61,7 +61,7 @@ namespace RO.DevTest.Application.Features.Product.Commands.UpdateProductCommand
 
             produto.ImageUrl = imagensUrls;
 
-            _productRepository.Update(produto);
+            await _productRepository.Update(produto);
 
             return Unit.Value;
         }

@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace RO.DevTest.Application.Features.Product.Commands.DeleteProductCommand
 {
-    public class DeleteProductCommandHandler
+    public class DeleteProductCommandHandler : IRequestHandler<DeleteProductCommand, Unit>
     {
         private readonly ILogged _logged;
         private readonly IProductRepository _productRepository;
@@ -21,7 +21,7 @@ namespace RO.DevTest.Application.Features.Product.Commands.DeleteProductCommand
             _productRepository = productRepository;
         }
 
-        public async Task<Unit> Handle (DeleteProductCommand command)
+        public async Task<Unit> Handle (DeleteProductCommand command, CancellationToken cancellationToken)
         {
             if (!await _logged.IsInRole("Admin"))
             {
@@ -35,7 +35,7 @@ namespace RO.DevTest.Application.Features.Product.Commands.DeleteProductCommand
                 throw new BadRequestException("Erro ao deletar produto.");
             }
 
-            _productRepository.Delete(product);
+            await _productRepository.Delete(product);
 
             return Unit.Value;
         }

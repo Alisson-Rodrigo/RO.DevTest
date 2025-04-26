@@ -38,6 +38,18 @@ namespace RO.DevTest.WebApi.Controllers
             return NoContent();
         }
 
+        [Authorize(Roles = "Admin")]
+        [HttpDelete("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> DeleteProduct([FromRoute] Guid id)
+        {
+            var request = new DeleteProductCommand { Id = id };
+            await _mediator.Send(request);
+            return NoContent();
+
+        }
+
         [HttpGet]
         [ProducesResponseType(typeof(List<GetAllProductResult>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -57,17 +69,6 @@ namespace RO.DevTest.WebApi.Controllers
             var request = new GetProductIdQuery{ Id = id };
             var response = await _mediator.Send(request);
             return Ok(response);
-
-        }
-
-        [HttpDelete("{id}")]
-        [ProducesResponseType(StatusCodes.Status204NoContent)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> DeleteProduct([FromRoute] Guid id)
-        {
-            var request = new DeleteProductCommand { Id = id };
-            await _mediator.Send(request);
-            return NoContent();
 
         }
 
